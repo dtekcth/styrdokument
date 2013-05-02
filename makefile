@@ -1,20 +1,23 @@
 default: all
 
-all: stadgar reglemente ekonomi
+all: stadgar reglemente ekonomi policy
+
+# Allt är dubbelt för annars får man inte TOC
 
 clean:
-	rm stadgar.aux stadgar.toc stadgar.log
-	rm reglemente.aux reglemente.toc reglemente.log
-	rm ekonomiskt_reglemente.aux ekonomiskt_reglemente.toc ekonomiskt_reglemente.log
+	rubber --clean stadgar.tex
+	rubber --clean reglemente.tex
+	rubber --clean ekonomiskt_reglemente.tex
+	rubber --clean policy.tex
 
 stadgar:
-	pdflatex stadgar.tex
-	pdflatex stadgar.tex
+	rubber -d stadgar.tex
 
 reglemente:
-	pdflatex reglemente.tex
-	pdflatex reglemente.tex
+	rubber -d reglemente.tex
 
 ekonomi:
-	pdflatex ekonomiskt_reglemente.tex
-	pdflatex ekonomiskt_reglemente.tex
+	rubber -d ekonomiskt_reglemente.tex
+
+policy:
+	rubber -d policy.tex
