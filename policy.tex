@@ -1,0 +1,88 @@
+%LaTeX-inställningar%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kompliera med pdflatex!!!
+\documentclass[a4paper, 10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[swedish]{babel}
+\usepackage{graphicx}
+%\usepackage{ae} %För riktiga fonts?
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\topmargin -20.0pt
+\headheight 56.0pt
+\setcounter{secnumdepth}{5}
+
+%FYLL I VID ÄNDRINGAR%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\updated}{2013-03-19} %Insert
+
+
+
+
+%Dokumentstart%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\pagestyle{fancy}
+
+%Header%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\headrule}{\vbox to 0pt{\hfill\hbox to 292pt{\hrulefill}}}
+\lhead{
+\raisebox{-25pt}[0pt][10pt]{\includegraphics[width=60pt]{Datalogo.pdf}}
+\parbox[b]{200pt}{
+\textbf{Datateknologsektionen}\\
+Chalmers studentkår\\
+Policy}}
+\rhead{ \flushright
+Sidan \thepage\ av \pageref{LastPage}\\
+Uppdaterad \updated}
+
+%Footer%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\footrulewidth}{\headrulewidth}
+\lfoot{\flushleft Datateknologsektionen\\
+    Rännvägen 8\\
+    412 58 Göteborg}
+\cfoot{}
+\rfoot{ \flushright styret@dtek.se\\
+www.dtek.se}
+\newpage
+
+%Titlepage%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{\fill}
+\begin{center}
+{\Huge \textbf{Policy för Datateknologsektionen}}\\
+\includegraphics[width=300pt]{Datalogo.pdf}
+\\{\LARGE Chalmers, Göteborg}
+\end{center}
+\vspace*{\fill}
+\begin{center}
+{\LARGE Uppdaterad: \updated}
+\end{center}
+\vspace*{\fill}
+\newpage
+
+%Allmänt%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Policyns syfte}
+Att undvika tråkiga incidenter som tidigare givit Datateknologsektionen och dess föreningar dåligt rykte samt i förlängningen även skadat Chalmers rykte. Detta ska göras genom att få fram en attitydförändring gällande datateknologers festande på Chalmers.
+
+\section{Policy - tre delmål}
+
+\begin{enumerate}
+\item Föreningsverksamheten ska
+\begin{itemize}
+\item Främja datateknologers möjlighet att delta i aktiviteter utanför studierna, med syfte att skapa trivsel och gemenskap.
+\item Verka för en positiv bild av datateknologer, både på internet i enlighet med Chalmers webpolicy, och på Chalmers område.
+\item Inbjuda till aspning för allas trevnad, i syfte att främja fortsatt föreningsverksamhet.
+\end{itemize}
+
+\item Nollning innebär att
+\begin{itemize}
+\item De nyantagna ska lära känna varandra och sin nya omgivning med äldre datateknologers hjälp. Detta innebär en väl balanserad blandning av studier och övriga aktiviteter.
+\end{itemize}
+
+\item Arrangemang och fester på Chalmers
+\begin{itemize}
+\item På samtliga arrangemang som anordnas av datateknologer ska ordning råda. Servering av rusdrycker ska ske med måtta.
+\end{itemize}
+
+\end{enumerate}
+
+\end{document}
