@@ -1,50 +1,16 @@
-%LaTeX-inställningar%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Kompliera med pdflatex!!!
-\documentclass[a4paper, 10pt]{article}
-
-\usepackage{hyperref}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[swedish]{babel}
-\usepackage{graphicx}
-%\usepackage{ae} %För riktiga fonts?
-\usepackage{fancyhdr}
-\usepackage{lastpage}
-\topmargin -20.0pt
-\headheight 56.0pt
+% LaTeX-inställningar%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kräver dtek-tex (github.com/dtekcth/dtek-tex)
+% KOMPILERAS MED xelatex!
+\documentclass[a4paper]{dtek}
 \setcounter{secnumdepth}{5}
+\title{Stadgar}
 
 %FYLL I VID ÄNDRINGAR%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\updated}{2013-03-19} %Insert
 
-
-
-
 %Dokumentstart%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\pagestyle{fancy}
-
-%Header%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\headrule}{\vbox to 0pt{\hfill\hbox to 292pt{\hrulefill}}}
-\lhead{
-\raisebox{-25pt}[0pt][10pt]{\includegraphics[width=60pt]{Datalogo.pdf}}
-\parbox[b]{200pt}{
-\textbf{Datateknologsektionen}\\
-Chalmers studentkår\\
-Stadgar}}
-\rhead{ \flushright
-Sidan \thepage\ av \pageref{LastPage}\\
-Uppdaterad \updated}
-
-%Footer%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\footrulewidth}{\headrulewidth}
-\lfoot{\flushleft Datateknologsektionen\\
-    Rännvägen 8\\
-    412 58 Göteborg}
-\cfoot{}
-\rfoot{ \flushright styret@dtek.se\\
-www.dtek.se}
-\newpage
+\makeheadfoot
 
 %Titlepage%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace*{\fill}
