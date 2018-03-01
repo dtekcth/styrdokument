@@ -1,0 +1,42 @@
+\documentclass{dtek}
+
+\usepackage{titlesec}
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
+
+\newcommand{\updated}{2017--05--15}
+
+\title{Reglemente}
+\date{Uppdaterad \updated}
+
+\begin{document}
+
+\makeheadfoot%
+
+\begin{center}
+  {\Huge \textbf{Reglemente för Datateknologsektionen}}
+
+  \includegraphics[width=300pt]{Datalogo.pdf}
+
+  {\LARGE Chalmers, Göteborg}
+
+  \vspace{2cm}
+
+  {\LARGE Uppdaterad \updated}
+\end{center}
+
+\newpage
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\newpage
+
+\input{sektionsmote.tex} % 1
+\input{sektionsstyrelsen.tex} % 2
+\input{studienamnden.tex} % 3
+\input{sektionsforeningar.tex} % 4
+\input{intresseforeningar.tex} % 5
+\input{valberedning.tex} % 6
+
+\end{document}
