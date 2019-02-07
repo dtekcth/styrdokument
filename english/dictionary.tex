@@ -1,0 +1,153 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{xparse}
+\usepackage{xifthen}
+\usepackage{titling}
+\usepackage{todonotes}
+
+\title{Swedish-English dictionary}
+\author{Talhenspresidiet/Speakers' Council '18}
+
+\setlength{\parskip}{\baselineskip}
+\setlength{\parindent}{0pt}
+
+\DeclareDocumentCommand{\phrase}{m m o}{\item [#1] #2
+    \ifthenelse{\isempty{#3}}{}{\textemdash{} #3}
+}
+
+\DeclareDocumentCommand{\see}{m}{\textit{(see~#1)}~}
+\DeclareDocumentCommand{\abbr}{m}{\textit{(abbr.~#1)}~}
+\DeclareDocumentCommand{\lit}{m}{\textit{(lit.~#1)}~}
+\DeclareDocumentCommand{\formal}{}{\textit{(formal)}~}
+
+\begin{document}
+\begin{titlingpage}
+    \maketitle
+        Datateknologsektionen har alltid haft problem med inkonsekventa översättningar
+        av svenska termer. Det här är vårt sätt att (försöka) göra något åt det genom
+        att skriva några översättningar.
+
+        The division has always had problems with inconsistent translations
+        of terms used in Swedish. This is our way to (try to) alleviate that issue
+        by writing down some translations.
+\end{titlingpage}
+
+% \pagenumbering{gobble}
+
+\newpage
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{2}
+
+\section{General terms}
+\begin{description}
+    \phrase{Chalmers Tekniska Högskola}{\abbr{CTH}Chalmers University of Technology}[\formal The name of the school.]
+    \phrase{Chalmers}{Chalmers}[\see{Chalmers Tekniska Högskola}]
+    \phrase{Datateknologsektionen}{Student Division of Computer Science and Engineering}[\formal Name of the division.]
+    \phrase{Teknologsektionen}{The student division}[Shorter version of the formal name. \see{Datateknologsektionen}]
+    \phrase{D-sektionen}{The D-division}[Alternate short version of the name of the division.]
+    \phrase{Sektionen}{The division}[\see{D-sektionen}]
+    \phrase{Data}{Data}[\see{D-sektionen}]
+    \phrase{D}{D}[\see{D-sektionen}]
+    \phrase{Basen}{Basen}[\lit{The Base} The main premises of the division.]
+    \phrase{Hacke Hackspett}{Woody Woodpecker}[The division patron saint.]
+    \phrase{Mottagning}{Reception}[The first few weeks at Chalmes when DNollK or DMNollK organizes fun events for you to get to know other students.]
+    \phrase{Mottagningsvecka}{Reception week}[A week during the reception.]
+    \phrase{Sittning}{Sitting}[An organized dinner with songs and gückel.]
+    \phrase{Gückel}{Gückel}[When a person or a group want to show off something during a sitting. Might be a song, a dance or just a cool trick. Approximate pronounciation in english: yyckel.]
+    \phrase{Aspning}{Asping}[When a committee organizes events meant for division members to get to know their committee better, usually in the end of their term.]
+\end{description}
+
+\section{Study related terms}
+\begin{description}
+    \phrase{Tenta}{Exam}[]
+    \phrase{Tentamen}{Exam}[\see{Tenta}]
+    \phrase{Tentavecka}{Exam week}[\abbr{TV} A week during which exams are held. Located at the end of each study period.]
+    \phrase{Omtentavecka}{Re-exam week}[A week during which re-exams are held. There are a couple throughout the year.]
+    \phrase{Läsår}{Study year}[The academic year, running from after summer break to before summer break.]
+    \phrase{Läsperiod}{Study period}[\abbr{LP} A quarter of a study year, usually consists of eight study weeks and an exam week.]
+    \phrase{Läsvecka}{Study week}[\abbr{LV} A week where studying takes place, compare to for instance a \textit{Tentavecka} or a \textit{Mottagningsvecka}.]
+    \phrase{Läsdag}{Study day}[A day on which studying is done. Usually non-holiday Mondays--Fridays.]
+\end{description}
+
+\section{Division meetings}
+\begin{description}
+    \phrase{Sektionsmöte}{Division meeting}[The meeting held approximately in study week 6 each study period where division members decide on everything.]
+    \phrase{Kallelse}{Summons}[A document that is available in Basen at least 5 study days before a division meeting which includes everything that will be handled at the meeting.]
+    \phrase{Protokoll}{Minutes}[A document which summarizes any decisions taken by the division meeting. Available on the bulletin board in Basen within two weeks after a meeting.]
+    \phrase{Talhenspresidiet}{Speakers' Council}[The three people that preside over division meetings. Consists of a speaker, a deputy speaker and a secretary.]
+    \phrase{Motion}{Member proposal}[A proposal from a division member to the division meeting.]
+    \phrase{Proposition}{Proposal from the division board}[A proposal from the division board to the division meeting.]
+    \phrase{Stadgar}{Constitution}[The most important rules that describe the basics of how the division works.]
+    \phrase{Reglemente}{By-laws}[Important rules that supplement the constitution to clarify and expand upon what is written in the constitution.]
+\end{description}
+
+\section{Division committees, hobby committees and organization}
+
+% Could do with more info about what the committees do
+\begin{description}
+    \phrase{Sektionskommitté}{Division committee}[An organization under the division that is slightly more important than the division clubs.]
+    \phrase{Intressekommitté}{Hobby committee}[An often smaller and slightly more focused committee under the division.]
+    \phrase{Styret}{Board of the Division}[They decide everything between division meetings.]
+    \phrase{Styrelsen}{Board of the Division}[\see{Styret}]
+    \phrase{Valberedning}{Nomination committee}[]
+    \phrase{DNS}{Student educational committee}[]
+    \phrase{D6}{Party committee}[]
+    \phrase{Delta}{PR comittee}[]
+    \phrase{DRUST}{Armoury}[Takes care of the division's premises.]
+    \phrase{DNollK}{Bachelors' reception comittee}[]
+    \phrase{DAG}{Career and business relations comittee}[]
+    \phrase{dHack}{System administrators}[]
+    \phrase{Ståthållarämbetet}{Flag bearers}[]
+    \phrase{iDrott}{Sports comittee}[]
+    \phrase{DLude}{Games comittee}[]
+    \phrase{D-Foto}{Photo comittee}[]
+    \phrase{DBus}{Division car maintainers}[]
+    \phrase{D-lirium}{Division newspaper}[]
+    \phrase{DMNollK}{Masters' reception comittee}[]
+    \phrase{DKock}{Cooking committee}[]
+    \phrase{jämställD}{Equality committee}[]
+\end{description}
+
+\section{Specific positions}
+\begin{description}
+    \phrase{Ordförande}{Chairman}[]
+    \phrase{Sektionsordförande}{Chairman of the Division Board}[]
+    \phrase{Kassör}{Treasurer}[]
+    \phrase{Sektionskassör}{Division treasurer}[]
+    \phrase{Studerandearbetsmiljöombud}{\abbr{SAMO}Student safety and welfare representative}[The person that takes care of the studying and working enviroment, both physical and psychosocial.]
+\end{description}
+
+\section{Student Union}
+\begin{description}
+    \phrase{Studentkåren}{The Student Union}[The central organization that covers all students at Chalmers]
+    \phrase{Chalmers Studentkår}{Chalmers Student Union}[\abbr{CHS}\formal~Name of the student union]
+    \phrase{Kåren}{The union}[Informal name of Studentkåren, \see{Studentkåren}]
+    \phrase{Kårfullmäktige}{Student Union Council}[\abbr{FUM}The assembly elected by all Student Union members that decides everything about the Union. A bit like the parliament of the Student Union.]
+    \phrase{Kårledningen}{Student Union management team}[The group of people chosen by the Student Union Council that do the day-to-day work that the Student Union has to do. A bit like the government of the Student Union.]
+    \phrase{Kårstyrelsen}{Student Union board}[A subset of the Student Union management team]
+\end{description}
+
+\section{Really nerdy meeting stuff}
+\begin{description}
+    \phrase{Justerare}{Adjusters}[Two people that read through the minutes after the meeting and makes sure that the minutes reflect what was said and done during the meeting. Always also tellers.]
+    \phrase{Rösträknare}{Tellers}[The two people that count votes during the division meeting. Always also adjusters.]
+    \phrase{Justerare tillika rösträknare}{Adjusters as well as tellers}[]
+    \phrase{Adjungering}{Co-option}[Letting people that aren't division members nor allowed to attend in any other regard, to participate in the division meeting.]
+    \phrase{Föredragningslista}{Agenda}[A part of the summons. Has to be approved at the start of each division meeting.]
+    \phrase{Ordningsfråga}{Point of order}[Used to point out a situation where the division meeting did not follow the established rules, the meeting should be in recess, or ventilation should be activated etc. May also be used to uphold the ancient tradition of pointing out that the flag bearer looks thirsty. If the meeting agrees that the flag bearer looks thirsty, the flag bearer is given something to drink.]
+    \phrase{Ordningsfråga}{Parliamentary inquiry}[A question to the chairman as to what the proper meeting procedure is in a particular situation.]
+    \phrase{Sakupplysning}{Point of information}[Factual information interjected into the debate when the one who is speaking is clearly wrong about something factual.]
+    \phrase{Lekmannarevisor}{Lay-auditor}[The two people that make sure that the bookkeeping done by the division is in order.]
+    \phrase{Ajournera}{Recess}[To temporarily pause the meeting for whatever reason. Handled as a point of order.]
+    \phrase{Streck i debatten}{Motion for the previous question}[To ask that the debate in the current issue is ended. Handled as a point of order.]
+    \phrase{Be om ordet}{Requesting the floor}[To ask to be allowed to speak in a debate. Done by clearly showing your number to the deputy speaker and waiting for them to recognise you.]
+    \phrase{Mötesordning}{Rules of order}[The rules that govern how division meetings are handled and what you can do during the meeting. Approved by at the start of each division meeting.]
+\end{description}
+
+\end{document}
