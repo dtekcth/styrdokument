@@ -1,0 +1,57 @@
+% LaTeX-inställningar%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kräver dtek-tex (github.com/dtekcth/dtek-tex)
+% KOMPILERAS MED xelatex!
+\documentclass[a4paper]{dtek}
+\setcounter{secnumdepth}{5}
+\title{Constitution}
+
+\newcommand{\sdocsae}{Student Division of Computer Science and Engineering~}
+
+%FYLL I VID ÄNDRINGAR%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\updated}{2019-02-07} %Insert
+
+%Dokumentstart%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\makeheadfoot
+
+%Titlepage%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{\fill}
+\begin{center}
+{\Huge \textbf{By-laws of the \sdocsae}}
+\par\bigskip
+\includegraphics[width=300pt]{dteklogo.pdf}
+\par\bigskip
+{\LARGE Chalmers, Gothenburg}
+\end{center}
+\vspace*{\fill}
+\begin{center}
+{\LARGE Updated: \updated}
+\end{center}
+\vspace*{\fill}
+
+
+\newpage
+\setcounter{tocdepth}{1}
+\tableofcontents
+\newpage
+
+
+%Innan vi börjar...%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{section}{-1}
+\section{Before we begin\dots}
+This is a translation of the Swedish version of the document. In case there's a difference between the English and Swedish versions, the Swedish version prevails.
+
+This translation was written by Tove and Hugo, and is guided by the dictionary written by Talhenspresidiet/Speakers' Council '18
+
+The English terms for meeting formalities in this document are mostly taken from ``Robert's Rules of Order, Newly Revised'', a book which includes the rules most commonly used in the U.S. when conducting meetings.
+
+\newpage
+
+\input{division_meeting.tex} % 1
+\input{division_board.tex} % 2
+\input{dns.tex} % 3
+\input{division_committees.tex} % 4
+\input{interest_committees.tex} % 5
+\input{nomination_committee.tex} % 6
+
+\end{document}
