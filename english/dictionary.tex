@@ -1,18 +1,20 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper]{dtek}
 
-\usepackage[english]{babel}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
 \usepackage{xparse}
 \usepackage{xifthen}
-\usepackage{titling}
-\usepackage{todonotes}
+%\usepackage{titling}
+%\usepackage{todonotes}
 
 \title{Swedish-English dictionary}
 \author{Talhenspresidiet/Speakers' Council '18}
 
 \setlength{\parskip}{\baselineskip}
 \setlength{\parindent}{0pt}
+\widowpenalty9001
+\clubpenalty9001
 
 \DeclareDocumentCommand{\phrase}{m m o}{\item [#1] #2
     \ifthenelse{\isempty{#3}}{}{\textemdash{} #3}
@@ -23,9 +25,20 @@
 \DeclareDocumentCommand{\lit}{m}{\textit{(lit.~#1)}~}
 \DeclareDocumentCommand{\formal}{}{\textit{(formal)}~}
 
+\DeclareDocumentCommand{\fun}{m}{}
+% \DeclareDocumentCommand{\fun}{}{}  % Switch to this for fun-mode
+
+%FYLL I VID ÄNDRINGAR%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\updated}{2019-02-08} %Insert
+
 \begin{document}
-\begin{titlingpage}
-    \maketitle
+\makeheadfoot
+
+\vspace*{\fill}
+\begin{center}
+{\Huge \textbf{Swedish-English dictionary}}
+\par\bigskip
+
         Datateknologsektionen har alltid haft problem med inkonsekventa översättningar
         av svenska termer. Det här är vårt sätt att (försöka) göra något åt det genom
         att skriva några översättningar.
@@ -33,7 +46,16 @@
         The division has always had problems with inconsistent translations
         of terms used in Swedish. This is our way to (try to) alleviate that issue
         by writing down some translations.
-\end{titlingpage}
+
+
+\par\bigskip
+{\LARGE Chalmers, Gothenburg}
+\end{center}
+\vspace*{\fill}
+\begin{center}
+{\LARGE Updated: \updated}
+\end{center}
+\vspace*{\fill}
 
 % \pagenumbering{gobble}
 
@@ -55,6 +77,9 @@
     \phrase{Data}{Data}[\see{D-sektionen}]
     \phrase{D}{D}[\see{D-sektionen}]
     \phrase{Basen}{Basen}[\lit{The Base} The main premises of the division.]
+    \phrase{NC}{NC}[The building opposite Basen where many D-students study.]
+    \phrase{Nördcentrum}{Nördcentrum}[\lit{The Nerd Center} \see{NC}]
+    \phrase{Idéläran}{Idéläran}[\formal \see{NC}]
     \phrase{Hacke Hackspett}{Woody Woodpecker}[The division patron saint.]
     \phrase{Mottagning}{Reception}[The first few weeks at Chalmes when DNollK or DMNollK organizes fun events for you to get to know other students.]
     \phrase{Mottagningsvecka}{Reception week}[A week during the reception.]
@@ -67,12 +92,13 @@
 \begin{description}
     \phrase{Tenta}{Exam}[]
     \phrase{Tentamen}{Exam}[\see{Tenta}]
-    \phrase{Tentavecka}{Exam week}[\abbr{TV} A week during which exams are held. Located at the end of each study period.]
+    \phrase{Tentavecka}{Exam week}[\abbr{TV} A week during which exams are held. Located at the end of each study period. \fun{Abbreviated TV due to the procrastination that occurs during this week}]
     \phrase{Omtentavecka}{Re-exam week}[A week during which re-exams are held. There are a couple throughout the year.]
     \phrase{Läsår}{Study year}[The academic year, running from after summer break to before summer break.]
     \phrase{Läsperiod}{Study period}[\abbr{LP} A quarter of a study year, usually consists of eight study weeks and an exam week.]
     \phrase{Läsvecka}{Study week}[\abbr{LV} A week where studying takes place, compare to for instance a \textit{Tentavecka} or a \textit{Mottagningsvecka}.]
     \phrase{Läsdag}{Study day}[A day on which studying is done. Usually non-holiday Mondays--Fridays.]
+    \fun{\phrase{Rekursion}{Recursion}[\see{Rekursion}]}
 \end{description}
 
 \section{Division meetings}
@@ -92,24 +118,24 @@
 % Could do with more info about what the committees do
 \begin{description}
     \phrase{Sektionskommitté}{Division committee}[An organization under the division that is slightly more important than the division clubs.]
-    \phrase{Intressekommitté}{Hobby committee}[An often smaller and slightly more focused committee under the division.]
+    \phrase{Hobbykommitté}{Hobby committee}[An often smaller and slightly more focused committee under the division.]
     \phrase{Styret}{Board of the Division}[They decide everything between division meetings.]
     \phrase{Styrelsen}{Board of the Division}[\see{Styret}]
     \phrase{Valberedning}{Nomination committee}[]
     \phrase{DNS}{Student educational committee}[]
     \phrase{D6}{Party committee}[]
-    \phrase{Delta}{PR comittee}[]
+    \phrase{Delta}{PR committee}[]
     \phrase{DRUST}{Armoury}[Takes care of the division's premises.]
-    \phrase{DNollK}{Bachelors' reception comittee}[]
-    \phrase{DAG}{Career and business relations comittee}[]
+    \phrase{DNollK}{Bachelors' reception committee}[]
+    \phrase{DAG}{Career and business relations committee}[]
     \phrase{dHack}{System administrators}[]
     \phrase{Ståthållarämbetet}{Flag bearers}[]
-    \phrase{iDrott}{Sports comittee}[]
-    \phrase{DLude}{Games comittee}[]
-    \phrase{D-Foto}{Photo comittee}[]
+    \phrase{iDrott}{Sports committee}[]
+    \phrase{DLude}{Games committee}[]
+    \phrase{D-Foto}{Photo committee}[]
     \phrase{DBus}{Division car maintainers}[]
     \phrase{D-lirium}{Division newspaper}[]
-    \phrase{DMNollK}{Masters' reception comittee}[]
+    \phrase{DMNollK}{Masters' reception committee}[]
     \phrase{DKock}{Cooking committee}[]
     \phrase{jämställD}{Equality committee}[]
 \end{description}
