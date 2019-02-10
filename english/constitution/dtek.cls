@@ -1,3 +1,4 @@
+% vim: set ft=tex:
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{dtek}[2013/04/07 Datateknologsektionen Chalmers]
 
@@ -48,7 +49,7 @@
 \DeclareDocumentCommand \makehf {}{%
   \pagestyle{fancy}
   \fancyhf{}
-  
+
   \newcommand{\headleft}{%
     \raisebox{-3mm}{\includegraphics[width=16mm]{dteklogo}}\hspace{1mm}
     \parbox[b]{10cm}{%
@@ -61,14 +62,14 @@
     Sida \thepage\ av \pageref{LastPage}\\
     \@date
   }
-  
+
   % Calculate header height
   \settototalheight\headheight{\headleft}
   \addtolength\headheight{1.0pt}
-  
+
   \lhead{\headleft}
   \rhead{\headright}
-  
+
   \renewcommand{\headrule}{
     \nointerlineskip
     \hskip 16mm\hrulefill
@@ -77,13 +78,13 @@
   \renewcommand{\footrulewidth}{\headrulewidth}
 
   \ifincludeaddress
-  
+
     \lfoot{%
       \flushleft Datateknologsektionen\\
       Rännvägen 8\\
       412 58 Göteborg
     }
-    
+
     \rfoot{%
       \begin{flushright}
         \href{mailto:styret@dtek.se}{styret@dtek.se}\\
