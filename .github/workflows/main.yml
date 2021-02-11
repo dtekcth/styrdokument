@@ -1,0 +1,76 @@
+name: Recompile styrdokument
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on pushing on the master branch
+  push:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  compile_latex:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out the repository 
+      - name: Checkout entire repository
+        uses: actions/checkout@v2
+        
+      # Sets variables used later if files were changed
+      - name: Filter changed files
+        uses: dorny/paths-filter@v2.2.1
+        id: filter
+        with:
+          filters: |
+            stadgar:
+              - 'stadgar/stadgar.tex'
+            reglemente:
+              - 'reglemente/*'
+            eko_reglemente:
+              - 'ekonomiskt_reglemente/ekonomiskt_reglemente.tex'
+                
+      - name: Checkout dtek-class
+        uses: actions/checkout@v2
+        with:
+          repository: dtekcth/dTeX
+          path: './classes'
+
+      - run: 'cp ./classes/* ./stadgar'
+        if: steps.filter.outputs.stadgar == 'true'
+      - name: Kompilera stadgar
+        if: steps.filter.outputs.stadgar == 'true'
+        uses: vinay0410/tectonic-action@v1.1.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # Path of Tex File
+          tex_path: 'stadgar/stadgar.tex'
+          # String stating whether to push output PDF, PDF will only be pushed in case of "yes"
+          push: 'yes'
+          
+      - run: 'cp ./classes/* ./reglemente'
+        if: steps.filter.outputs.reglemente == 'true'
+      - name: Kompilera reglemente
+        if: steps.filter.outputs.reglemente == 'true'
+        uses: vinay0410/tectonic-action@v1.1.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # Path of Tex File
+          tex_path: 'reglemente/reglemente.tex'
+          # String stating whether to push output PDF, PDF will only be pushed in case of "yes"
+          push: 'yes'
+          
+      - run: 'cp ./classes/* ./ekonomiskt_reglemente'
+        if: steps.filter.outputs.eko_reglemente == 'true'
+      - name: Kompilera ekonomiskt reglemente
+        if: steps.filter.outputs.eko_reglemente == 'true'
+        uses: vinay0410/tectonic-action@v1.1.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # Path of Tex File
+          tex_path: 'ekonomiskt_reglemente/ekonomiskt_reglemente.tex'
+          # String stating whether to push output PDF, PDF will only be pushed in case of "yes"
+          push: 'yes'
