@@ -29,6 +29,8 @@ jobs:
               - 'reglemente/*'
             eko_reglemente:
               - 'ekonomiskt_reglemente/ekonomiskt_reglemente.tex'
+            date-it-reglemente:
+              - 'date-it-styrdokument/date-it-reglemente.tex'
                 
       - name: Checkout dtek-class
         uses: actions/checkout@v2
@@ -72,5 +74,16 @@ jobs:
         with:
           # Path of Tex File
           tex_path: 'ekonomiskt_reglemente/ekonomiskt_reglemente.tex'
+          # String stating whether to push output PDF, PDF will only be pushed in case of "yes"
+          push: 'yes'
+
+      - name: Kompilera DatE-ITs reglemente
+        if: steps.filter.outputs.date-it-regelemente == 'true'
+        uses: vinay0410/tectonic-action@v1.1.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # Path of Tex File
+          tex_path: 'date-it-styrdokument/date-it-reglemente.tex'
           # String stating whether to push output PDF, PDF will only be pushed in case of "yes"
           push: 'yes'
