@@ -11,7 +11,6 @@
 %\usepackage{ae} %För riktiga fonts?
 \usepackage{fancyhdr}
 \usepackage{lastpage}
-\usepackage[bottom]{footmisc}
 \topmargin -20.0pt
 \headheight 56.0pt
 \setcounter{secnumdepth}{5}
@@ -19,7 +18,7 @@
 \def\roundandprint #1{\xinttheiexpr #1\relax }
 
 %FYLL I VID ÄNDRINGAR%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\updated}{2021-12-09} %Insert
+\newcommand{\updated}{2023-12-07} %Insert
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PRISBASBELOPP
@@ -29,7 +28,7 @@
 
 
 \newcommand{\prisbasbelopp}[1]{
-    #1 prisbasbelopp 
+    #1 prisbasbelopp
     \ifdef{\nuvarandeprisbasbelopp}{
         \marginpar{
             \small{ \textbf{\roundandprint{\xintiexpr#1 * \nuvarandeprisbasbelopp\relax}kr}}
@@ -94,10 +93,10 @@ Detta reglemente har skapats för att skapa tydlighet över vad sektionens penga
 \subsection{Prisbasbelopp}
 \begin{itemize}
   \item Det prisbasbelopp som skall användas under hela verksamhetsåret är det prisbasbelopp som är aktuellt vid verksamhetsårets början.
-  \item Delar av prisbasbelopp skall avrundas till närmaste hundratal. 
+  \item Delar av prisbasbelopp skall avrundas till närmaste hundratal.
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Styrelsen 
+% Styrelsen
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Styrelsen}
 \subsection{}
@@ -112,7 +111,7 @@ Ordförande är skyldig att
 Kassören är skyldig att
 \begin{itemize}
   \item Teckna sektionens firma
-  \item Se till att kassör i varje kommitté har tillgång till och kunskap om sektionens stadgar, reglemente och ekonomiska reglemente 
+  \item Se till att kassör i varje kommitté har tillgång till och kunskap om sektionens stadgar, reglemente och ekonomiska reglemente
   \item Fortlöpande kontrollera sektionens räkenskaper och bokföring
   \item I samråd med styrelsen upprätta budgetförslag till första ordinarie höstmötet
   \item Till varje sektionsmöte kunna redogöra för sektionens ekonomiska ställning
@@ -147,7 +146,7 @@ Kassör i kommitté är skyldig att
 För kommittéer som saknar kassör ansvarar istället styrelsens kassör för samtliga av punkterna i \S\ref{sec:kommittee_kassor} med undantag för att lägga budget vilket görs i samråd med kommittéens ordförande
 \subsection{Budget}
 \label{sec:budget}
-Varje kommitté ska i början av året lägga en budget för hur dess pengar ska spenderas. Det är upp till styrelsens kassör att delge en mall för budget för att underlätta kommittéernas arbete. I budgeten ska det tydligt framgå hur pengarna ska spenderas med en uppskattning för vilken månad utgifter och inkomster hamnar i. 
+Varje kommitté ska i början av året lägga en budget för hur dess pengar ska spenderas. Det är upp till styrelsens kassör att delge en mall för budget för att underlätta kommittéernas arbete. I budgeten ska det tydligt framgå hur pengarna ska spenderas med en uppskattning för vilken månad utgifter och inkomster hamnar i.
 
 \subsubsection{}
 Varje kommittés budgetförslag ska godkännas av styrelsen. Som rapporterar vidare relevant information till sektionsmötet.
@@ -156,9 +155,9 @@ Varje kommittés budgetförslag ska godkännas av styrelsen. Som rapporterar vid
 \subsection{Kapital}
 \label{sec:sektionsforeningar_startkapital}
 \subsubsection{Startkapital}
-Kommittéer skall vid mandatperiodens början inte ha några tillgångar. 
+Kommittéer skall vid mandatperiodens början inte ha några tillgångar.
 \subsubsection{Startlån}
-Följande Kommittéer har rätt att låna \prisbasbelopp{0.25} från sektionsstyrelsen i form av startlån: 
+Följande Kommittéer har rätt att låna \prisbasbelopp{0.25} från sektionsstyrelsen i form av startlån:
 \begin{itemize}
   \item DRust
   \item DAG
@@ -172,12 +171,27 @@ DAG har rätt låna ytterligare \prisbasbelopp{1} i form av utökat startlån.
 \subsubsection{Slutkapital}
 Samtliga kommitteers tillgångar och skulder tillfaller sektionsstyrelsen vid mandatperiodens slut.
 \subsubsection{Stödkapital}
-Styret har rätt att utföra kortfristiga lån till sektionskommittéer för att betala kristiska skulder i väntan på ankommande kapital.
-\subsection{Budget}
-För arrangemang med förväntad omsättning överstigande 0.75 prisbasbelopp skall en noggrann budget upprättas och godkännas av styret innan arrangemanget får genomföras.
-\subsection{Fri kost}
-Vid arrangemang i kommitténs verksamhet får kommitténs ekonomi belastas med utgifter för inköp av fri kost, enligt följande tidsåtgång för arrangemanget, avrundat till närmaste femkrona:
+Styret har rätt att utföra kortfristiga lån till kommittéer vid behov. Dessa ska isåfall betalas tillbaka senast i slutet av mandatperioden.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Äskning
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Äskning}
+\subsection{Till styrelsen}
+Medlem eller kommittéer som önskar extra ekonomiska medel till sin verksamhet eller arrangemang skall inkomma med önskemål och skäl till styret.
+Styret kan bevilja extra medel om beloppet faller inom ramarna för de olika fonderna som styrelsen förvaltar. Om äskningen inte fallar inom dessa ramar kan den ändå beviljas förutsatt att beloppet understiger \prisbasbelopp{0.25} och inte överstiger sektionens budget.
+\subsection{Till sektionsmötet}
+Medlem eller kommittéer kan också inkomma med önskemål om extra ekonomiska medel till sin verksamhet eller arrangemang genom motion till sektionsmötet. Finansieringen av motionen ska göras med prioritet på medel från de fonder som styrelsen förvaltar.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Förmåner
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Rättigheter}
+För rättigheter får inte pengar spenderas på alkohol om inte annat anges.
+
+\subsection{Internrepresentation}
+\label{sec:internreps}
+Varje kommitté har inte rätt att belasta sin ekonomi med mer än:
 \begin{itemize}
     \item[-] \prisbasbelopp{0.015} för teambuildingaktiviteter per person.
     \item[-] \prisbasbelopp{0.0020} (avrundat till närmaste femkrona) för överlämning per person som deltar från avgående samt påstigande år.
@@ -190,22 +204,29 @@ Upp till \prisbasbelopp{0.0050} för teambuildingaktiviteter får användas till
 \subsubsection{}
 För att få använda hela det budgeterade beloppet för teambuilding måste 50\% av beloppet användas inom 8 månader från mandatperiodens början. Annars får inte mer än det som spenderats alternativt upp till 25\% användas.
 
-
 \subsection{Representationskläder}
-Varje kommitté har rätt att köpa representationskläder till varje medlem för att synliggör sig själva på sektionen och campus. Representationskläder kan ses som, overaller, arbetsbyxor, hoodies, t-shirts eller liknande.
+Varje kommitté har rätt att köpa representationskläder till varje medlem för att synliggöra sig själva på sektionen och campus. Representationskläder kan ses som, overaller, arbetsbyxor, hoodies, t-shirts eller liknande. Kostnaden för representationskläder får inte överstiga 0.02 prisbasbelopp per person i kommittén.
 
 \subsubsection{}
-I samband med representationskläder kan även tygmärken köpas in till kommittéen. Inköpet av märken får max subventioneras till kostnaden av inköp av 25 märken per person i kommittéen. Här tar styrelsen extra hänsyn till att priset inte är onödigt högt (jämfört med andra kommittéer)
+I samband med representationskläder kan även tygmärken köpas in till kommittén. Kostnaden av märken får max subventioneras till kostnaden av inköp av 25 märken per person i kommittén.
+\subsubsection{}
+Varje kommitée har rätt att skicka in en förfrågan för att använda upp till 0.06 prisbasbelopp per person i kommitéen. För att få lov att köpa in representationskläder för denna summa ska en kommitté få godkännande av styrelsen innan inköp. Detta genom att kommittén skickar förslag på kläder och en uppskattad kostnad som styrelsen baserar sitt beslut på.
 
 \subsubsection{}
-För att få lov att köpa in representationskläder ska en kommitté få godkännande av styrelsen innan inköp. Detta genom att kommittén skickar förslag på kläder och en uppskattad kostnad som styrelsen baserar sitt beslut på.
+En ansökan om representationskläder ska innehålla:
+\begin{itemize}
+  \item Det som man vill köpa in och vad som tidigare har köpts in.
+  \item När och i vilka sammanhang representationskläder kommer användas.
+  \item Varför gruppen vill ha representationskläder.
+  \item En ungefärlig kostnadsberäkning.
+\end{itemize}
 
 \subsubsection{}
 När styrelsen beslutar huruvida ett förslag godkänns ska följande tas hänsyn till:
 \begin{itemize}
     \item Att priset inte är onödigt dyrt (jämfört med liknande kläder för andra kommittéer).
     \item Att kläderna har en anknytning till verksamheten.
-        \item Att kommittén kommer använda kläderna tillräckligt mycket för att motivera inköp.
+    \item Att kommittén kommer använda kläderna tillräckligt mycket för att motivera inköp.
 \end{itemize}
 
 \subsection{Representation \& Möteskostnader}
@@ -226,14 +247,13 @@ Ovanstående belopp får inte överskrida kommitténs ekonomiska resurser. \\
 \section{Sponsring}
 \subsection{}
 Om kommittéer vill söka sponsring ska detta göras i samråd med datas arbetsmarknadsgrupp, DAG.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Fonder
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fonder}
 De fonder som beskrivs i denna del syftar till sparande av medel för framtida användande enligt respektive fonds syfte, antingen planerat eller spontant. Ett uttag ur en fond skall inte belasta Sektionsstyrelsens godkända budget, däremot skall inköp och investeringar vara föremål för redovisning i balans– respektive resultaträkning. Detta gäller om inget annat specificeras i fonden.
 
-\subsection{}
+\subsection{Uttag ur fonder}
+Sektionsmötet äger alltid rätt att göra uttag ur fonder i enhet med fondens syfte. Sektionsmötet äger rätt att vid 2/3 majoritet göra uttag ur fonder i strid mot fondens syfte, ett välmotiverat behov till uttaget skall protokollföras vid ett sådant beslut. Alla andra uttagsformer måste specificeras i det ekonomiska reglementet.
+
+\subsection{Redovisning av uttag}
 Alla uttag ur fonder ska redovisas på sektionsmöte i styrelsens verksamhetsrapport.
 
 \subsection{Kapitalfonden}
@@ -251,7 +271,6 @@ Fonden förvaltas av sektionens styrelse.
 \begin{itemize}
 \item Sektionsstyrelsen har rätt att bevilja uttag ur fonden på belopp upp till totalt \prisbasbelopp{0.25} per tillfälle. Uttag av belopp överstigande \prisbasbelopp{0.25} skall godkännas av sektionsmöte innan medel utbetalas.
 \item Sektionsstyrelsen äger inte rätt att ta ut mer än 50\% av fondens totala värde per tillfälle.
-\item Sektionsmötet äger rätt att vid välmotiverat behov göra uttag över \prisbasbelopp{0.25} , över 50\% av fondens totala värde eller i strid med syftet i \S\ref{sec:kapitalfond_syfte}
 \end{itemize}
 
 \subsection{Lokalfonden}
@@ -270,9 +289,8 @@ Fonden förvaltas av sektionens styrelse.
 \subsubsection{Uttag}
 \begin{itemize}
 \item Sektionsstyrelsen disponerar sjuttiofem (75) \% av årets tillförda kapital,
-enligt \S\ref{sec:lokalfond_avsattning}, för basdrift av sektionslokalerna. 
+enligt \S\ref{sec:lokalfond_avsattning}, för basdrift av sektionslokalerna.
 \item Sektionsstyrelsen har rätt att besluta om ytterliggare uttag, dock skall detta redovisas inför nästkommande sektionsmöte. Vid detta sektionsmöte skall i sådana fall även genomförda eller planerade inköp, reparationer och underhåll redovisas.
-\item Sektionsmötet äger rätt att vid välmotiverat behov göra uttag i strid med syftet i \S\ref{sec:lokalfond_syfte}.
 \end{itemize}
 
 \subsection{Bilfonden}
@@ -290,7 +308,6 @@ Fonden förvaltas av sektionens styrelse.
 \begin{itemize}
     \item Sektionsstyrelsen äger rätt att bevilja uttag för omfattande reparation av sektionensbil.
     \item Sektionsstyrelsen har rätt att köpa in en ny bil efter att ha fått en proposition till sektionsmötet godkänd med en specifikation på kostnad och krav för bilen.
-    \item Sektionsmötet äger rätt att vid välmotiverat behov göra uttag i strid med syftet i \S\ref{sec:bilfond_syfte}.
 \end{itemize}
 
 \subsection{Idéfonden}
@@ -306,29 +323,39 @@ Idéfonden förvaltas av sektionsstyrelsen.
 \item All avkastning ifrån idéfonden under verksamhetsåret.
 \end{itemize}
 \subsubsection{Uttag}
-Sektionsstyrelsen har rätt att, på förslag av medlem i teknologsektionen, bevilja uttagpå upp till 0,25 prisbasbelopp som går i hand med idéfondens syfte. Sektionsmötet har rätt att, på förslag av medlem i teknologsektionen, bevilja uttagsom går i hand med \S\ref{sec:idefond_syfte}
-\subsubsection{Motstridig uttag}
-Sektionsmötet kan besluta om att göra uttag i strid med idéfondens syfte.
-
-% Representation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Representation}
-\subsection{}
-Sektionsstyrelsen har rätt att efter ansökan bevilja alla grupper under
-sektionen representationskläder och tillbehör\footnote{Till exempel märken,
-knappar, revärer \dots} för upp till 0,06 prisbasbelopp.
-
-\subsubsection{}
-En ansökan om representationskläder ska innehålla:
 \begin{itemize}
-  \item när och i vilka sammanhang representationskläder kommer användas,
-  \item varför gruppen vill ha representationskläder, och
-  \item en ungefärlig kostnadsberäkning.
+  \item Sektionsstyrelsen har rätt att, på förslag av medlem i teknologsektionen, bevilja uttag på upp till 0,25 prisbasbelopp som går i hand med idéfondens syfte.
+  \item Sektionsmötet har rätt att, på förslag av medlem i teknologsektionen, bevilja uttagsom går i hand med \S\ref{sec:idefond_syfte}.
 \end{itemize}
-\subsubsection{}
-Styrelsen ska vid beslut om en ansökan om representationskläder särskilt beakta
+
+\subsection{Husfonden}
+\subsubsection{Syfte}
+\label{sec:husfond_syfte}
+Syftet med husfonden är att möjliggöra framtida fastighetsinvestering eller lokalför-värvning för sektionensmedlemmars bästa.
+\subsubsection{Förvaltning}
+Husfonden förvaltas av sektionsstyrelsen.
+\subsubsection{Avsättning}
 \begin{itemize}
-  \item hur mycket kläderna kommer användas,
-  \item vilken exponering sektionen får, och
-  \item kostnaden i förhållande till de andra punkterna.
+  \item En av styrelsen budgeterad summa som godkänts av sektionsmötet.
+  \item All avkastning ifrån husfonden under verksamhetsåret.
+\end{itemize}
+\subsubsection{Uttag}
+\begin{itemize}
+  \item Sektionsstyrelsen har rätt att göra uttag som uppfyller syftet efter att ha fått en proposition till sektionsmötet godkänd som inkluderar en kostnadskalkyl och annan relevant information om investeringen.
+\end{itemize}
+\subsection{Jubileumsfonden}
+\subsubsection{Syfte}
+\label{sec:jubileumfond_syfte}
+Syftet med Jubileumsfonden är att möjliggöra firande av sektionens framtida jubileum, genom att möjliggöra större och dyrare evenemang.
+\subsubsection{Förvaltning}
+Jubileumsfonden förvaltas av sektionsstyrelsen.
+\subsubsection{Avsättning}
+\begin{itemize}
+  \item En av styrelsen budgeterad summa som godkänts av sektionsmötet.
+  \item All avkastning ifrån Jubileumsfonden under verksamhetsåret.
+\end{itemize}
+\subsubsection{Uttag}
+\begin{itemize}
+  \item Sektionsstyrelsen har rätt att göra uttag under jubileumsår.
 \end{itemize}
 \end{document}
