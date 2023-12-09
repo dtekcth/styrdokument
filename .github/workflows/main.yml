@@ -38,7 +38,7 @@ jobs:
           repository: dtekcth/dTeX
           path: './classes'
 
-      - run: 'cp ./classes/* ./stadgar'
+      - run: 'cp -r ./classes/* ./stadgar'
         if: steps.filter.outputs.stadgar == 'true'
       - name: Kompilera stadgar
         if: steps.filter.outputs.stadgar == 'true'
@@ -51,7 +51,7 @@ jobs:
           # String stating whether to push output PDF, PDF will only be pushed in case of "yes"
           push: 'yes'
           
-      - run: 'cp ./classes/* ./reglemente'
+      - run: 'cp -r ./classes/* ./reglemente'
         if: steps.filter.outputs.reglemente == 'true'
       - name: Kompilera reglemente
         if: steps.filter.outputs.reglemente == 'true'
@@ -64,7 +64,7 @@ jobs:
           # String stating whether to push output PDF, PDF will only be pushed in case of "yes"
           push: 'yes'
           
-      - run: 'cp ./classes/* ./ekonomiskt_reglemente'
+      - run: 'cp -r ./classes/* ./ekonomiskt_reglemente'
         if: steps.filter.outputs.eko_reglemente == 'true'
       - name: Kompilera ekonomiskt reglemente
         if: steps.filter.outputs.eko_reglemente == 'true'
