@@ -25,3 +25,5 @@
 *.fls
 *.xdv
 *aux/
+
+.direnv/
