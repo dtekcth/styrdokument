@@ -1,0 +1,84 @@
+#+title: Todo
+
+* Stadga [1/52]
+- [ ] Att namnge subsubsections
+- [X] Att ha paragraftecken på sections
+- [ ] Att lägga till Inspektor som undantag till förtroendepost i 2.1.2
+- [ ] Att korrigera identationproblem 3.1.2
+- [ ] Att fundera lite mer på definitioner, specifikt kring medlemmar.
+- [ ] Att tydligare sätta upp röstningskrav (definera enkel, kvalificerad, överväldigande etc. majoritet)
+- [ ] Att lägga till en punkt som definerar propositioner.
+- [ ] Vi använder skall och ska, vi bör bestämma oss för en av dom.
+- [ ] Man hade nog kunnat klumpa samman revison, inspektion och ansvarsfrihet i en punkt
+- [ ]
+- [ ] 3.1.1 behöver ses över med avseende på dateit, kommitteer, DNS och THP.
+- [ ] DNS borde vara definerad på något sätt i stadgan som gör det omöjligt att ta bort DNS ut reglementet.
+- [ ] Att fixa med röstkrav i hela punkt 4.
+- [ ] Att fixa med röstkrav i 5.8.5.
+- [ ] Att fixa med röstkrav i 9.2.
+- [ ] Att fixa med röstkrav i 15.1.
+- [ ] Att fixa med röstkrav i 16.1.1.
+- [ ] Att fixa med röstkrav i 16.2.
+- [ ] 4.1 ta bort "alla"
+- [ ] 4.2 fixa linebreakproblem
+- [ ] Vi upprepar oss i 3.2.1 och i 5.1 om att sektionsmötet är det högsta beslutande organet. - Vi stryker 5.1 bara.
+- [ ] 5.3.3 vad räknas som en inkommen motion? Om den kommer in 6 dagar innan, är den inkommen?
+- [ ] 5.6 vad räknas som en skriftlig anmälan motion? Vi bör defininera vad en motion
+- [ ] Definera vad en proposition är.
+- [ ] 5.2 borde definera att det ska vara 4 st per verksamhetsår, inte i allmänt.
+- [ ] Förtydliga 5.3.3 med fler inkomna alternativ.
+- [ ] 5.8.4 att förtydliga att det endast röstas om ordningen en gång innan något förslag har ställts mot något annat förslag i varje given fråga.
+- [ ] 5.9 stava rätt
+- [ ] enligt 5.9 så måste vi inadjungera PA. Vi kanske ska tillåta dom att närvara? Eller borde det lyftas som en ordningsfråga?
+- [ ] 5.9-5.12 borde läggas till subsubsections och ligga under en punkt som heter Rättigheter.
+  - [ ] Man bör nog definera hur man kan tilldela och potentiellt frånta rättigheter??
+- [ ] 6.3 : Vilken kallelse? Bör stå sektionsmöteskallelse för det relevanta mötet. man kan worda det på samma sätt som motioner.
+- [ ] 7.2 : Skriva ut hela SAMO förkortningen?
+- [ ] 7.2 : Ha övriga ledamot istället för medlemmar
+- [ ] Att ändra alla medlemmar till ledamot i sektionsstyrelsen (punkt 7) så att vi inte förvirrar medlemmar av sektionen med medlemmar av styrelsen
+- [ ] 7.5: snygga till formuleringen så att ordf inte äger kassören
+- [ ] Hur funkar det med att vi väljer in ordförande internt och när ska det vara klart? i 8.1.1 - Det löser sig i stadgan
+- [ ] Vi borde ha samma wording i 8.2.1, 2.1.2 och 8.2.3
+- [ ] 8.2.1 borde vara förtroendeposter
+- [ ] 8.2.2 ska ha en referens till kapitel 6, inte 5.
+- [ ] 8.2.3 Potentiellt stryka hela punkten då vi upprepar oss. Delen som angår mydighet kanske ska va kvar, men då kanske enbart den delen.
+- [ ] 8.4 lägga till policy i listan av saker att rätta sig efter. Kanske betänka om "övriga fattade beslut" är vettigt och om man kan skriva det bättre.
+- [ ] 8.5 ändra sektionskommittee till kommittee.
+- [ ] Byt bort pronomen i 9.2 till "individen"
+- [ ] Tolka och förtydliga 9.2
+- [ ] punkt 10 borde få en subsection i stil med resten av stadgan. Potentiellt dra in både hedersmedlemm och stödmedlem in under medlemmar
+- [ ] Att kontrollera hur den officiella anslagstavlan funkar
+- [ ] fixa manuell linebreak i 13.2.1
+- [ ] Fixa grammatik i 13.2.2
+- [ ] Förtydliga sektionsavgift i 14.1 (Att det går genom kåren)
+- [ ] Förtydliga administrationsavgif i 14.2 (Att det går genom sektionen)
+- [ ] Att korrigera 15.2 på samma sätt som för medlemmar, d.v.s. att det ska vara för civilingenjör Datateknik Chalmers.
+- [ ] Vem bestämmer om hedersbetygelser? Definera vem som bestämmer? Skriva om 18.1 till "Beslut om Hedersbetygelser" med "Teknologsektionen som tack eller hedersbetygelse besluta om att dela ut barspeglar till en person genom sektionsmötet."
+
+* Reglemente [1/21]
+- [X] Att ha paragraftecken på sections
+- [ ] Att förklara hur propositioner funkar under punkt 1.
+- [ ] Att lägga till val av vice mötesordf under 1.1.1
+- [ ] Att definera vad mötesordförande, vice ordförande och sekreterare har för ansvar under mötet.
+- [ ] Att göra THP till en kommittee??? WTF. Det visar sig att de har allt i former av skyldigheter och rättigheter som alla andra kommitteer förutom det att de rent krasst sett inte har rätten att använda våra namn och symboler. - JA, gör detta.
+- [ ] 1.4.2: Ta bort den explicita referensen.
+- [ ] Göra uppdraget mer diffust, t.ex. ska man inte säga "Talhen ÄR sektionsmötets ordförande" utan snarare "Talhen nomineras alltid till mötets ordförande"
+- [ ] När tas beslut någonsin från THP? (1.4.5) - Vi behöver undersöka detta mer men vi tror det ska bort/bytas till mötesordförandes roll.
+- [ ] 2.1.4 Kanske borde kallas för sektionskassör (då det är så de benämns av alla) och också ha ansvaret att teckna sektionens firma då vi behöver båda.
+- [ ] 2.1.5 sektionssekreterare istället för styrelse.
+- [ ] 2.1.5 Lägga till något om GDPR/Drive ansvarig
+- [ ] 2.1.7 Ledamot istället för Medlemm.
+- [ ] Definera Val till styret!! Typ genom att man går till inval av presidiet och sedan till inval av de respektive ordförande i sektionsstyrelsen.
+- [ ] 2.3 Byt till ledamot.
+- [ ] Att i samtliga instanser i punkt 3 byta plats på subsubsections ansvar och ledamöter.
+- [ ] korrigera mandatperiod-wording för kommitteer med 1jan-31dec så de har samma. (Dnollk, DMnollk, bakaD, DSL)
+- [ ] Att kommitteer som väljer ordf internt inte får ha 0-x medlemmar p.g.a. 8.1.1 i stadgan.
+- [ ] Utöka DatE-IT kapitlet så de är i stil med kommitteernas definitioner.
+- [ ] Byt namn på DatE-IT så det är en projektgrupp istället för kommittee (avoid confusion regarding elections)
+- [ ] Uppdatera DatE-IT fyllnadsval så det matchar verkligheten (de har inval genom dateitstyrelsen).
+- [ ] Bättre definera våran officiella anslagstavla. Typ stjäla den som finns i PR policy och sedan deffa om i policyn att använda den officiella anslagstavlan.
+
+* Ekonomiska reglemente [1/3]
+- [X] paragrafer på allt.
+- [ ] Section names
+- [ ] Fixa THP så det inte är ett special case i 1.1
