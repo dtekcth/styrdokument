@@ -10,7 +10,6 @@
 - [ ] Att lägga till en punkt som definerar propositioner.
 - [ ] Vi använder skall och ska, vi bör bestämma oss för en av dom.
 - [ ] Man hade nog kunnat klumpa samman revison, inspektion och ansvarsfrihet i en punkt
-- [ ]
 - [ ] 3.1.1 behöver ses över med avseende på dateit, kommitteer, DNS och THP.
 - [ ] DNS borde vara definerad på något sätt i stadgan som gör det omöjligt att ta bort DNS ut reglementet.
 - [ ] Att fixa med röstkrav i hela punkt 4.
@@ -57,7 +56,7 @@
 - [ ] Ifall revisorer avsätts, interim revisorer
 - [ ] Kalla revisorer lekmannarevisorer överallt?
 
-* Reglemente [3/21]
+* Reglemente [4/21]
 - [X] Att ha paragraftecken på sections
 - [ ] Att förklara hur propositioner funkar under punkt 1.
 - [ ] Att lägga till val av vice mötesordf under 1.1.1
@@ -72,7 +71,7 @@
 - [ ] 2.1.7 Ledamot istället för Medlemm.
 - [ ] Definera Val till styret!! Typ genom att man går till inval av presidiet och sedan till inval av de respektive ordförande i sektionsstyrelsen.
 - [ ] 2.3 Byt till ledamot.
-- [ ] Att i samtliga instanser i punkt 3 byta plats på subsubsections ansvar och ledamöter.
+- [X] Att i samtliga instanser i punkt 3 byta plats på subsubsections ansvar och ledamöter.
 - [X] korrigera mandatperiod-wording för kommitteer med 1jan-31dec så de har samma. (Dnollk, DMnollk, bakaD, DSL)
 - [X] Att kommitteer som väljer ordf internt inte får ha 0-x medlemmar p.g.a. 8.1.1 i stadgan.
 - [ ] Utöka DatE-IT kapitlet så de är i stil med kommitteernas definitioner.
