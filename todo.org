@@ -30,8 +30,7 @@
 - [ ] 5.8.4 att förtydliga att det endast röstas om ordningen en gång innan något förslag har ställts mot något annat förslag i varje given fråga.
 - [ ] 5.9 stava rätt
 - [ ] enligt 5.9 så måste vi inadjungera PA. Vi kanske ska tillåta dom att närvara? Eller borde det lyftas som en ordningsfråga?
-- [ ] 5.9-5.12 borde läggas till subsubsections och ligga under en punkt som heter Rättigheter.
-  - [ ] Man bör nog definera hur man kan tilldela och potentiellt frånta rättigheter??
+- [ ] 5.9-5.12 borde läggas till subsubsections och ligga under en punkt som heter Rättigheter. Man bör nog definera hur man kan tilldela och potentiellt frånta rättigheter??
 - [ ] 6.3 : Vilken kallelse? Bör stå sektionsmöteskallelse för det relevanta mötet. man kan worda det på samma sätt som motioner.
 - [ ] 7.2 : Skriva ut hela SAMO förkortningen?
 - [ ] 7.2 : Ha övriga ledamot istället för medlemmar
@@ -58,7 +57,7 @@
 - [ ] Ifall revisorer avsätts, interim revisorer
 - [ ] Kalla revisorer lekmannarevisorer överallt?
 
-* Reglemente [1/21]
+* Reglemente [3/21]
 - [X] Att ha paragraftecken på sections
 - [ ] Att förklara hur propositioner funkar under punkt 1.
 - [ ] Att lägga till val av vice mötesordf under 1.1.1
@@ -74,8 +73,8 @@
 - [ ] Definera Val till styret!! Typ genom att man går till inval av presidiet och sedan till inval av de respektive ordförande i sektionsstyrelsen.
 - [ ] 2.3 Byt till ledamot.
 - [ ] Att i samtliga instanser i punkt 3 byta plats på subsubsections ansvar och ledamöter.
-- [ ] korrigera mandatperiod-wording för kommitteer med 1jan-31dec så de har samma. (Dnollk, DMnollk, bakaD, DSL)
-- [ ] Att kommitteer som väljer ordf internt inte får ha 0-x medlemmar p.g.a. 8.1.1 i stadgan.
+- [X] korrigera mandatperiod-wording för kommitteer med 1jan-31dec så de har samma. (Dnollk, DMnollk, bakaD, DSL)
+- [X] Att kommitteer som väljer ordf internt inte får ha 0-x medlemmar p.g.a. 8.1.1 i stadgan.
 - [ ] Utöka DatE-IT kapitlet så de är i stil med kommitteernas definitioner.
 - [ ] Byt namn på DatE-IT så det är en projektgrupp istället för kommittee (avoid confusion regarding elections)
 - [ ] Uppdatera DatE-IT fyllnadsval så det matchar verkligheten (de har inval genom dateitstyrelsen).
