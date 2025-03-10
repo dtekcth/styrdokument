@@ -1,6 +1,6 @@
 #+title: Todo
 
-* Stadga [1/52]
+* Stadga [1/55]
 - [ ] Att namnge subsubsections
 - [X] Att ha paragraftecken på sections
 - [ ] Att lägga till Inspektor som undantag till förtroendepost i 2.1.2
@@ -54,6 +54,9 @@
 - [ ] Förtydliga administrationsavgif i 14.2 (Att det går genom sektionen)
 - [ ] Att korrigera 15.2 på samma sätt som för medlemmar, d.v.s. att det ska vara för civilingenjör Datateknik Chalmers.
 - [ ] Vem bestämmer om hedersbetygelser? Definera vem som bestämmer? Skriva om 18.1 till "Beslut om Hedersbetygelser" med "Teknologsektionen som tack eller hedersbetygelse besluta om att dela ut barspeglar till en person genom sektionsmötet."
+- [ ] Ifall DNS avsätts, interim DNS
+- [ ] Ifall revisorer avsätts, interim revisorer
+- [ ] Kalla revisorer lekmannarevisorer överallt?
 
 * Reglemente [1/21]
 - [X] Att ha paragraftecken på sections
