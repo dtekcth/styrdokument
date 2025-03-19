@@ -59,11 +59,11 @@
 * Reglemente [4/21]
 - [X] Att ha paragraftecken på sections
 - [ ] Att förklara hur propositioner funkar under punkt 1.
-- [ ] Att lägga till val av vice mötesordf under 1.1.1
+- [X] Att lägga till val av vice mötesordf under 1.1.1
 - [ ] Att definera vad mötesordförande, vice ordförande och sekreterare har för ansvar under mötet.
 - [X] Att göra THP till en kommittee??? WTF. Det visar sig att de har allt i former av skyldigheter och rättigheter som alla andra kommitteer förutom det att de rent krasst sett inte har rätten att använda våra namn och symboler. - JA, gör detta.
-- [ ] 1.4.2: Ta bort den explicita referensen.
-- [ ] Göra uppdraget mer diffust, t.ex. ska man inte säga "Talhen ÄR sektionsmötets ordförande" utan snarare "Talhen nomineras alltid till mötets ordförande"
+- [X] 1.4.2: Ta bort den explicita referensen.
+- [X] Göra uppdraget mer diffust, t.ex. ska man inte säga "Talhen ÄR sektionsmötets ordförande" utan snarare "Talhen nomineras alltid till mötets ordförande"
 - [ ] När tas beslut någonsin från THP? (1.4.5) - Vi behöver undersöka detta mer men vi tror det ska bort/bytas till mötesordförandes roll.
 - [X] 2.1.4 Kanske borde kallas för sektionskassör (då det är så de benämns av alla) och också ha ansvaret att teckna sektionens firma då vi behöver båda.
 - [X] 2.1.5 sektionssekreterare istället för styrelse.
