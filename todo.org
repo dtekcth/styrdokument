@@ -1,6 +1,6 @@
 #+title: Todo
 
-* Stadga [1/55]
+* Stadga [1/54]
 - [ ] Att namnge subsubsections
 - [X] Att ha paragraftecken på sections
 - [ ] Att lägga till Inspektor som undantag till förtroendepost i 2.1.2
@@ -56,7 +56,7 @@
 - [ ] Ifall revisorer avsätts, interim revisorer
 - [ ] Kalla revisorer lekmannarevisorer överallt?
 
-* Reglemente [4/21]
+* Reglemente [12/21]
 - [X] Att ha paragraftecken på sections
 - [ ] Att förklara hur propositioner funkar under punkt 1.
 - [X] Att lägga till val av vice mötesordf under 1.1.1
