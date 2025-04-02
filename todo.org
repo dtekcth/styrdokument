@@ -1,13 +1,13 @@
 #+title: Todo
 
-* Stadga [1/54]
+* Stadga [3/54]
 - [ ] Att namnge subsubsections
 - [X] Att ha paragraftecken på sections
 - [ ] Att lägga till Inspektor som undantag till förtroendepost i 2.1.2
 - [ ] Att korrigera identationproblem 3.1.2
 - [ ] Att fundera lite mer på definitioner, specifikt kring medlemmar.
 - [ ] Att tydligare sätta upp röstningskrav (definera enkel, kvalificerad, överväldigande etc. majoritet)
-- [ ] Att lägga till en punkt som definerar propositioner.
+- [X] Att lägga till en punkt som definerar propositioner.
 - [ ] Vi använder skall och ska, vi bör bestämma oss för en av dom.
 - [ ] Man hade nog kunnat klumpa samman revison, inspektion och ansvarsfrihet i en punkt
 - [ ] 3.1.1 behöver ses över med avseende på dateit, kommitteer, DNS och THP.
@@ -23,7 +23,7 @@
 - [ ] Vi upprepar oss i 3.2.1 och i 5.1 om att sektionsmötet är det högsta beslutande organet. - Vi stryker 5.1 bara.
 - [ ] 5.3.3 vad räknas som en inkommen motion? Om den kommer in 6 dagar innan, är den inkommen?
 - [ ] 5.6 vad räknas som en skriftlig anmälan motion? Vi bör defininera vad en motion
-- [ ] Definera vad en proposition är.
+- [X] Definera vad en proposition är.
 - [ ] 5.2 borde definera att det ska vara 4 st per verksamhetsår, inte i allmänt.
 - [ ] Förtydliga 5.3.3 med fler inkomna alternativ.
 - [ ] 5.8.4 att förtydliga att det endast röstas om ordningen en gång innan något förslag har ställts mot något annat förslag i varje given fråga.
