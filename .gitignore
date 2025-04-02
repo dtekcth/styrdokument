@@ -27,3 +27,4 @@
 *aux/
 
 .direnv/
+**/.auctex-auto
