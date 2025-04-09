@@ -1,6 +1,6 @@
 #+title: Todo
 
-* Stadga [27/54]
+* Stadga [36/54]
 - [X] Att namnge subsubsections
 - [X] Att ha paragraftecken på sections
 - [X] Att lägga till Inspektor som undantag till förtroendepost i 2.1.2
@@ -41,20 +41,20 @@
 - [X] 8.2.2 ska ha en referens till kapitel 6, inte 5.
 - [X] 8.2.3 Potentiellt stryka hela punkten då vi upprepar oss. Delen som angår mydighet kanske ska va kvar, men då kanske enbart den delen.
 - [X] 8.4 lägga till policy i listan av saker att rätta sig efter. Kanske betänka om "övriga fattade beslut" är vettigt och om man kan skriva det bättre.
-- [ ] 8.5 ändra sektionskommittee till kommittee.
-- [ ] Byt bort pronomen i 9.2 till "individen"
-- [ ] Tolka och förtydliga 9.2
+- [X] 8.5 ändra sektionskommittee till kommittee.
+- [X] Byt bort pronomen i 9.2 till "individen"
+- [X] Tolka och förtydliga 9.2
 - [ ] punkt 10 borde få en subsection i stil med resten av stadgan. Potentiellt dra in både hedersmedlemm och stödmedlem in under medlemmar
 - [ ] Att kontrollera hur den officiella anslagstavlan funkar
-- [ ] fixa manuell linebreak i 13.2.1
-- [ ] Fixa grammatik i 13.2.2
-- [ ] Förtydliga sektionsavgift i 14.1 (Att det går genom kåren)
-- [ ] Förtydliga administrationsavgif i 14.2 (Att det går genom sektionen)
-- [ ] Att korrigera 15.2 på samma sätt som för medlemmar, d.v.s. att det ska vara för civilingenjör Datateknik Chalmers.
+- [X] fixa manuell linebreak i 13.2.1
+- [X] Fixa grammatik i 13.2.2
+- [X] Förtydliga sektionsavgift i 14.1 (Att det går genom kåren)
+- [X] Förtydliga administrationsavgif i 14.2 (Att det går genom sektionen)
+- [X] Att korrigera 15.2 på samma sätt som för medlemmar, d.v.s. att det ska vara för civilingenjör Datateknik Chalmers.
 - [ ] Vem bestämmer om hedersbetygelser? Definera vem som bestämmer? Skriva om 18.1 till "Beslut om Hedersbetygelser" med "Teknologsektionen som tack eller hedersbetygelse besluta om att dela ut barspeglar till en person genom sektionsmötet."
 - [ ] Ifall DNS avsätts, interim DNS
 - [ ] Ifall revisorer avsätts, interim revisorer
-- [ ] Kalla revisorer lekmannarevisorer överallt?
+- [X] Kalla revisorer lekmannarevisorer överallt?
 
 * Reglemente [14/20]
 - [X] Att ha paragraftecken på sections
