@@ -1,6 +1,6 @@
 #+title: Todo
 
-* Stadga [21/54]
+* Stadga [27/54]
 - [X] Att namnge subsubsections
 - [X] Att ha paragraftecken på sections
 - [X] Att lägga till Inspektor som undantag till förtroendepost i 2.1.2
@@ -34,13 +34,13 @@
 - [X] 7.2 : Skriva ut hela SAMO förkortningen?
 - [X] 7.2 : Ha övriga ledamot istället för medlemmar
 - [X] Att ändra alla medlemmar till ledamot i sektionsstyrelsen (punkt 7) så att vi inte förvirrar medlemmar av sektionen med medlemmar av styrelsen
-- [ ] 7.5: snygga till formuleringen så att ordf inte äger kassören
+- [X] 7.5: snygga till formuleringen så att ordf inte äger kassören
 - [ ] Hur funkar det med att vi väljer in ordförande internt och när ska det vara klart? i 8.1.1 - Det löser sig i stadgan
-- [ ] Vi borde ha samma wording i 8.2.1, 2.1.2 och 8.2.3
-- [ ] 8.2.1 borde vara förtroendeposter
-- [ ] 8.2.2 ska ha en referens till kapitel 6, inte 5.
-- [ ] 8.2.3 Potentiellt stryka hela punkten då vi upprepar oss. Delen som angår mydighet kanske ska va kvar, men då kanske enbart den delen.
-- [ ] 8.4 lägga till policy i listan av saker att rätta sig efter. Kanske betänka om "övriga fattade beslut" är vettigt och om man kan skriva det bättre.
+- [X] Vi borde ha samma wording i 8.2.1, 2.1.2 och 8.2.3
+- [X] 8.2.1 borde vara förtroendeposter
+- [X] 8.2.2 ska ha en referens till kapitel 6, inte 5.
+- [X] 8.2.3 Potentiellt stryka hela punkten då vi upprepar oss. Delen som angår mydighet kanske ska va kvar, men då kanske enbart den delen.
+- [X] 8.4 lägga till policy i listan av saker att rätta sig efter. Kanske betänka om "övriga fattade beslut" är vettigt och om man kan skriva det bättre.
 - [ ] 8.5 ändra sektionskommittee till kommittee.
 - [ ] Byt bort pronomen i 9.2 till "individen"
 - [ ] Tolka och förtydliga 9.2
