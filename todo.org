@@ -12,12 +12,12 @@
 - [X] Man hade nog kunnat klumpa samman revison, inspektion och ansvarsfrihet i en punkt
 - [ ] 3.1.1 behöver ses över med avseende på dateit, kommitteer, DNS och THP.
 - [ ] DNS borde vara definerad på något sätt i stadgan som gör det omöjligt att ta bort DNS ut reglementet.
-- [ ] Att fixa med röstkrav i hela punkt 4.
-- [ ] Att fixa med röstkrav i 5.8.5.
-- [ ] Att fixa med röstkrav i 9.2.
-- [ ] Att fixa med röstkrav i 15.1.
-- [ ] Att fixa med röstkrav i 16.1.1.
-- [ ] Att fixa med röstkrav i 16.2.
+- [x] Att fixa med röstkrav i hela punkt 4.
+- [x] Att fixa med röstkrav i 5.8.5.
+- [x] Att fixa med röstkrav i 9.2.
+- [x] Att fixa med röstkrav i 15.1.
+- [x] Att fixa med röstkrav i 16.1.1.
+- [x] Att fixa med röstkrav i 16.2.
 - [X] 4.1 ta bort "alla"
 - [X] 4.2 fixa linebreakproblem
 - [X] Vi upprepar oss i 3.2.1 och i 5.1 om att sektionsmötet är det högsta beslutande organet. - Vi stryker 5.1 bara.
