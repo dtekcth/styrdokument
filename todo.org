@@ -6,7 +6,7 @@
 - [X] Att lägga till Inspektor som undantag till förtroendepost i 2.1.2
 - [X] Att korrigera identationproblem 3.1.2
 - [ ] Att fundera lite mer på definitioner, specifikt kring medlemmar.
-- [ ] Att tydligare sätta upp röstningskrav (definera enkel, kvalificerad, överväldigande etc. majoritet)
+- [x] Att tydligare sätta upp röstningskrav (definera enkel, kvalificerad, överväldigande etc. majoritet)
 - [X] Att lägga till en punkt som definerar propositioner.
 - [X] Vi använder skall och ska, vi bör bestämma oss för en av dom.
 - [X] Man hade nog kunnat klumpa samman revison, inspektion och ansvarsfrihet i en punkt
