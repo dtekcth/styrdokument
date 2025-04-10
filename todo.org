@@ -1,6 +1,6 @@
 #+title: Todo
 
-* Stadga [47/55]
+* Stadga [50/55]
 - [x] Att namnge subsubsections
 - [x] Att ha paragraftecken på sections
 - [x] Att lägga till Inspektor som undantag till förtroendepost i 2.1.2
@@ -46,13 +46,15 @@
 - [x] Byt bort pronomen i 9.2 till "individen"
 - [x] Tolka och förtydliga 9.2
 - [x] punkt 10 borde få en subsection i stil med resten av stadgan. Potentiellt dra in både hedersmedlemm och stödmedlem in under medlemmar
-- [ ] Att kontrollera hur den officiella anslagstavlan funkar
+- [x] Att kontrollera hur den officiella anslagstavlan funkar
 - [x] fixa manuell linebreak i 13.2.1
 - [x] Fixa grammatik i 13.2.2
 - [x] Förtydliga sektionsavgift i 14.1 (Att det går genom kåren)
 - [x] Förtydliga administrationsavgif i 14.2 (Att det går genom sektionen)
 - [x] Att korrigera 15.2 på samma sätt som för medlemmar, d.v.s. att det ska vara för civilingenjör Datateknik Chalmers.
-- [ ] Vem bestämmer om hedersbetygelser? Definera vem som bestämmer? Skriva om 18.1 till "Beslut om Hedersbetygelser" med "Teknologsektionen som tack eller hedersbetygelse besluta om att dela ut barspeglar till en person genom sektionsmötet."
+- [x] Vem bestämmer om hedersbetygelser? 
+      Definera vem som bestämmer? Skriva om 18.1 till "Beslut om Hedersbetygelser" med "Teknologsektionen som tack 
+      eller hedersbetygelse besluta om att dela ut barspeglar till en person genom sektionsmötet."
 - [x] Ifall DNS avsätts, interim DNS
 - [x] Ifall revisorer avsätts, interim revisorer
 - [x] Kalla revisorer lekmannarevisorer överallt?
