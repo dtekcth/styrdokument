@@ -56,7 +56,7 @@
 - [x] Ifall DNS avsätts, interim DNS
 - [x] Ifall revisorer avsätts, interim revisorer
 - [x] Kalla revisorer lekmannarevisorer överallt?
-- [ ] Ang. firmatecknare: Kanske borde kallas för sektionskassören (och inte vice) (då det är så de benämns av alla) och också ha ansvaret att teckna sektionens firma då vi behöver båda.
+- [x] Ang. firmatecknare: Kanske borde kallas för sektionskassören (och inte vice) (då det är så de benämns av alla) och också ha ansvaret att teckna sektionens firma då vi behöver båda.
 
 * Reglemente [14/20]
 - [x] Att ha paragraftecken på sections
