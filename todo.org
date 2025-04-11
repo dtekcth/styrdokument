@@ -82,8 +82,8 @@
 - [ ] Uppdatera DatE-IT fyllnadsval så det matchar verkligheten (de har inval genom dateitstyrelsen).
 - [ ] Bättre definera våran officiella anslagstavla. Typ stjäla den som finns i PR policy och sedan deffa om i policyn att använda den officiella anslagstavlan.
 
-* Ekonomiska reglemente [3/4]
-- [X] paragrafer på allt.
-- [X] Section names
-- [X] Fixa THP så det inte är ett special case i 1.1
-- [ ] Gör repskläderna ha ett maxtak och formulera det kapitlet som det görs i förmåner.
+* Ekonomiska reglemente [4/4]
+- [x] paragrafer på allt.
+- [x] Section names
+- [x] Fixa THP så det inte är ett special case i 1.1
+- [x] Gör repskläderna ha ett maxtak och formulera det kapitlet som det görs i förmåner.
