@@ -60,7 +60,7 @@
 - [x] Kalla revisorer lekmannarevisorer överallt?
 - [x] Ang. firmatecknare: Kanske borde kallas för sektionskassören (och inte vice) (då det är så de benämns av alla) och också ha ansvaret att teckna sektionens firma då vi behöver båda.
 
-* Reglemente [15/20]
+* Reglemente [15/21]
 - [x] Att ha paragraftecken på sections
 - [x] Att lägga till val av vice mötesordf under 1.1.1
 - [x] Att definera vad mötesordförande, vice ordförande och sekreterare har för ansvar under mötet.
@@ -81,6 +81,7 @@
 - [ ] Byt namn på DatE-IT så det är en projektgrupp istället för kommittee (avoid confusion regarding elections)
 - [ ] Uppdatera DatE-IT fyllnadsval så det matchar verkligheten (de har inval genom dateitstyrelsen).
 - [ ] Bättre definera våran officiella anslagstavla. Typ stjäla den som finns i PR policy och sedan deffa om i policyn att använda den officiella anslagstavlan.
+- [ ] Att göra alla inval till DFoto, iDrott, DLude, Dkock, Jämställd, dHack, dLirium, DBrus, DBus, plantaD, Talhenspresidiet (och kanske ståthållarämbetet, är fett konstigt med 3 inval för den kommitteen.)
 
 * Ekonomiska reglemente [4/4]
 - [x] paragrafer på allt.
