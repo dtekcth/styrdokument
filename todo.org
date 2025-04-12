@@ -77,7 +77,7 @@
 - [x] Att i samtliga instanser i punkt 3 byta plats på subsubsections ansvar och ledamöter.
 - [x] korrigera mandatperiod-wording för kommitteer med 1jan-31dec så de har samma. (Dnollk, DMnollk, bakaD, DSL)
 - [x] Att kommitteer som väljer ordf internt inte får ha 0-x medlemmar p.g.a. 8.1.1 i stadgan
-- [ ] Utöka DatE-IT kapitlet så de är i stil med kommitteernas definitioner.
+- [x] Utöka DatE-IT kapitlet så de är i stil med kommitteernas definitioner.
 - [ ] Byt namn på DatE-IT så det är en projektgrupp istället för kommittee (avoid confusion regarding elections)
 - [ ] Uppdatera DatE-IT fyllnadsval så det matchar verkligheten (de har inval genom dateitstyrelsen).
 - [ ] Bättre definera våran officiella anslagstavla. Typ stjäla den som finns i PR policy och sedan deffa om i policyn att använda den officiella anslagstavlan.
