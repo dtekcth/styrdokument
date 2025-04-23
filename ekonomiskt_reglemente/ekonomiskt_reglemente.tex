@@ -1,22 +1,11 @@
 %LaTeX-inställningar%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Kompliera med pdflatex!!!
-\documentclass[a4paper, 10pt]{article}
+\documentclass[a4paper]{dtek}
 
-\usepackage{hyperref}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[swedish]{babel}
-\usepackage{graphicx}
-\usepackage{etoolbox}
-%\usepackage{ae} %För riktiga fonts?
-\usepackage{fancyhdr}
-\usepackage{lastpage}
-\topmargin -20.0pt
-\headheight 56.0pt
 \setcounter{secnumdepth}{5}
-\input xintexpr.sty\relax
-\def\roundandprint #1{\xinttheiexpr #1\relax }
-\renewcommand{\thesection}{\S\arabic{section}}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus 0.2ex}{0.7em}
 
 %FYLL I VID ÄNDRINGAR%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\updated}{2024-11-22} %Insert
@@ -36,46 +25,26 @@
         }
     }{}
 }
+
+
+\title{Ekonomiskt reglemente}
+\date{Uppdaterad \updated}
 %Dokumentstart%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\pagestyle{fancy}
 
-%Header%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\headrule}{\vbox to 0pt{\hfill\hbox to 292pt{\hrulefill}}}
-\lhead{
-\raisebox{-25pt}[0pt][10pt]{\includegraphics[width=60pt]{../Datalogo.pdf}}
-\parbox[b]{200pt}{
-\textbf{Datateknologsektionen}\\
-Chalmers studentkår\\
-Ekonomiskt reglemente}}
-\rhead{ \flushright
-Sidan \thepage\ av \pageref{LastPage}\\
-Uppdaterad \updated}
+\makeheadfoot%
 
-
-%Footer%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\footrulewidth}{\headrulewidth}
-\lfoot{\flushleft Datateknologsektionen\\
-    Rännvägen 8\\
-    412 58 Göteborg}
-\cfoot{}
-\rfoot{ \flushright styret@dtek.se\\
-www.dtek.se}
-\newpage
-
-%Titlepage%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace*{\fill}
 \begin{center}
-{\Huge \textbf{Ekonomiskt reglemente för Datateknologsektionen}}\\
-\includegraphics[width=300pt]{../Datalogo.pdf}
-\\{\LARGE Chalmers, Göteborg}
-\end{center}
-\vspace*{\fill}
-\begin{center}
-{\LARGE Uppdaterad: \updated}
-\end{center}
-\vspace*{\fill}
+  {\Huge \textbf{Ekonomiskt Reglemente för Datateknologsektionen}}
 
+  \includegraphics[width=300pt]{dteklogo.pdf}
+
+  {\LARGE Chalmers, Göteborg}
+
+  \vspace{2cm}
+
+  {\LARGE Uppdaterad \updated}
+\end{center}
 
 \newpage
 \setcounter{tocdepth}{1}
