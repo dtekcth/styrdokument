@@ -15,12 +15,13 @@
 \RequirePackage{fancyhdr}
 \RequirePackage[swedish]{babel}
 \RequirePackage{lastpage}
-\RequirePackage[unicode]{hyperref}
+\RequirePackage[unicode,hidelinks]{hyperref}
 \RequirePackage[includeheadfoot, top=2.0cm, bottom=4cm]{geometry}
 \RequirePackage{xparse}
 \RequirePackage{etoolbox}
 
 \RequirePackage{pdfpages}
+\RequirePackage{titlesec}
 
 \AtBeginDocument{
   \hypersetup{
@@ -32,6 +33,15 @@
     linkcolor=black,
     urlcolor=black
   }
+
+  \newcommand{\secref}[1]{\S\ref{#1}}
+
+  \titleformat{\section}
+  {\normalfont\Large\bfseries}{\S\thesection}{1em}{}
+  \titleformat{\subsection}
+  {\normalfont\large\bfseries}{\S\thesubsection}{1em}{}
+  \titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries}{\S\thesubsubsection}{1em}{}
 }
 
 \DeclareDocumentCommand \subtitle {m} {%
@@ -48,7 +58,7 @@
 \DeclareDocumentCommand \makehf {}{%
   \pagestyle{fancy}
   \fancyhf{}
-  
+
   \newcommand{\headleft}{%
     \raisebox{-3mm}{\includegraphics[width=16mm]{dteklogo}}\hspace{1mm}
     \parbox[b]{10cm}{%
@@ -61,14 +71,14 @@
     Sida \thepage\ av \pageref{LastPage}\\
     \@date
   }
-  
+
   % Calculate header height
   \settototalheight\headheight{\headleft}
   \addtolength\headheight{1.0pt}
-  
+
   \lhead{\headleft}
   \rhead{\headright}
-  
+
   \renewcommand{\headrule}{
     \nointerlineskip
     \hskip 16mm\hrulefill
@@ -77,13 +87,13 @@
   \renewcommand{\footrulewidth}{\headrulewidth}
 
   \ifincludeaddress
-  
+
     \lfoot{%
       \flushleft Datateknologsektionen\\
       Rännvägen 8\\
       412 58 Göteborg
     }
-    
+
     \rfoot{%
       \begin{flushright}
         \href{mailto:styret@dtek.se}{styret@dtek.se}\\
