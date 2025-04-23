@@ -1,89 +1,89 @@
 #+title: Todo
 
 * Stadga [50/55]
-- [x] Att namnge subsubsections
-- [x] Att ha paragraftecken på sections
-- [x] Att lägga till Inspektor som undantag till förtroendepost i 2.1.2
-- [x] Att korrigera identationproblem 3.1.2
+- [X] Att namnge subsubsections
+- [X] Att ha paragraftecken på sections
+- [X] Att lägga till Inspektor som undantag till förtroendepost i 2.1.2
+- [X] Att korrigera identationproblem 3.1.2
 - [ ] Att fundera lite mer på definitioner, specifikt kring medlemmar.
-- [x] Att tydligare sätta upp röstningskrav (definera enkel, kvalificerad, överväldigande etc. majoritet)
-- [x] Att lägga till en punkt som definerar propositioner.
-- [x] Vi använder skall och ska, vi bör bestämma oss för en av dom.
-- [x] Man hade nog kunnat klumpa samman revison, inspektion och ansvarsfrihet i en punkt
-- [x] 3.1.1 behöver ses över med avseende på dateit, kommitteer, DNS och THP.
+- [X] Att tydligare sätta upp röstningskrav (definera enkel, kvalificerad, överväldigande etc. majoritet)
+- [X] Att lägga till en punkt som definerar propositioner.
+- [X] Vi använder skall och ska, vi bör bestämma oss för en av dom.
+- [X] Man hade nog kunnat klumpa samman revison, inspektion och ansvarsfrihet i en punkt
+- [X] 3.1.1 behöver ses över med avseende på dateit, kommitteer, DNS och THP.
 - [ ] DNS borde vara definerad på något sätt i stadgan som gör det omöjligt att ta bort DNS ut reglementet.
-    - Jag vette fan asså. Tror det är fine att det är en kommittee och att vi har en studieansvarig, som i vanliga fall bör vara DNS. //Kryddan 
-- [x] Att fixa med röstkrav i hela punkt 4.
-- [x] Att fixa med röstkrav i 5.8.5.
-- [x] Att fixa med röstkrav i 9.2.
-- [x] Att fixa med röstkrav i 15.1.
-- [x] Att fixa med röstkrav i 16.1.1.
-- [x] Att fixa med röstkrav i 16.2.
-- [x] 4.1 ta bort "alla"
-- [x] 4.2 fixa linebreakproblem
-- [x] Vi upprepar oss i 3.2.1 och i 5.1 om att sektionsmötet är det högsta beslutande organet. - Vi stryker 5.1 bara.
-- [x] 5.3.3 vad räknas som en inkommen motion? Om den kommer in 6 dagar innan, är den inkommen?
-- [x] 5.6 vad räknas som en skriftlig anmälan motion? Vi bör defininera vad en motion
-- [x] Definera vad en proposition är.
-- [x] 5.2 borde definera att det ska vara 4 st per verksamhetsår, inte i allmänt.
+  - Jag vette fan asså. Tror det är fine att det är en kommittee och att vi har en studieansvarig, som i vanliga fall bör vara DNS. //Kryddan
+- [X] Att fixa med röstkrav i hela punkt 4.
+- [X] Att fixa med röstkrav i 5.8.5.
+- [X] Att fixa med röstkrav i 9.2.
+- [X] Att fixa med röstkrav i 15.1.
+- [X] Att fixa med röstkrav i 16.1.1.
+- [X] Att fixa med röstkrav i 16.2.
+- [X] 4.1 ta bort "alla"
+- [X] 4.2 fixa linebreakproblem
+- [X] Vi upprepar oss i 3.2.1 och i 5.1 om att sektionsmötet är det högsta beslutande organet. - Vi stryker 5.1 bara.
+- [X] 5.3.3 vad räknas som en inkommen motion? Om den kommer in 6 dagar innan, är den inkommen?
+- [X] 5.6 vad räknas som en skriftlig anmälan motion? Vi bör defininera vad en motion
+- [X] Definera vad en proposition är.
+- [X] 5.2 borde definera att det ska vara 4 st per verksamhetsår, inte i allmänt.
 - [ ] Förtydliga 5.3.3 med fler inkomna alternativ.
 - [ ] 5.8.4 att förtydliga att det endast röstas om ordningen en gång innan något förslag har ställts mot något annat förslag i varje given fråga.
-- [x] 5.9 stava rätt
-- [x] enligt 5.9 så måste vi inadjungera PA. Vi kanske ska tillåta dom att närvara? Eller borde det lyftas som en ordningsfråga?
-- [x] 5.9-5.12 borde läggas till subsubsections och ligga under en punkt som heter Rättigheter. Man bör nog definera hur man kan tilldela och potentiellt frånta rättigheter??
-- [x] 6.3 : Vilken kallelse? Bör stå sektionsmöteskallelse för det relevanta mötet. man kan worda det på samma sätt som motioner.
-- [x] 7.2 : Skriva ut hela SAMO förkortningen?
-- [x] 7.2 : Ha övriga ledamot istället för medlemmar
-- [x] Att ändra alla medlemmar till ledamot i sektionsstyrelsen (punkt 7) så att vi inte förvirrar medlemmar av sektionen med medlemmar av styrelsen
-- [x] 7.5: snygga till formuleringen så att ordf inte äger kassören
+- [X] 5.9 stava rätt
+- [X] enligt 5.9 så måste vi inadjungera PA. Vi kanske ska tillåta dom att närvara? Eller borde det lyftas som en ordningsfråga?
+- [X] 5.9-5.12 borde läggas till subsubsections och ligga under en punkt som heter Rättigheter. Man bör nog definera hur man kan tilldela och potentiellt frånta rättigheter??
+- [X] 6.3 : Vilken kallelse? Bör stå sektionsmöteskallelse för det relevanta mötet. man kan worda det på samma sätt som motioner.
+- [X] 7.2 : Skriva ut hela SAMO förkortningen?
+- [X] 7.2 : Ha övriga ledamot istället för medlemmar
+- [X] Att ändra alla medlemmar till ledamot i sektionsstyrelsen (punkt 7) så att vi inte förvirrar medlemmar av sektionen med medlemmar av styrelsen
+- [X] 7.5: snygga till formuleringen så att ordf inte äger kassören
 - [ ] Hur funkar det med att vi väljer in ordförande internt och när ska det vara klart? i 8.1.1 - Det löser sig i stadgan
-- [x] Vi borde ha samma wording i 8.2.1, 2.1.2 och 8.2.3
-- [x] 8.2.1 borde vara förtroendeposter
-- [x] 8.2.2 ska ha en referens till kapitel 6, inte 5.
-- [x] 8.2.3 Potentiellt stryka hela punkten då vi upprepar oss. Delen som angår mydighet kanske ska va kvar, men då kanske enbart den delen.
-- [x] 8.4 lägga till policy i listan av saker att rätta sig efter. Kanske betänka om "övriga fattade beslut" är vettigt och om man kan skriva det bättre.
-- [x] 8.5 ändra sektionskommittee till kommittee.
-- [x] Byt bort pronomen i 9.2 till "individen"
-- [x] Tolka och förtydliga 9.2
-- [x] punkt 10 borde få en subsection i stil med resten av stadgan. Potentiellt dra in både hedersmedlemm och stödmedlem in under medlemmar
-- [x] Att kontrollera hur den officiella anslagstavlan funkar
-- [x] fixa manuell linebreak i 13.2.1
-- [x] Fixa grammatik i 13.2.2
-- [x] Förtydliga sektionsavgift i 14.1 (Att det går genom kåren)
-- [x] Förtydliga administrationsavgif i 14.2 (Att det går genom sektionen)
-- [x] Att korrigera 15.2 på samma sätt som för medlemmar, d.v.s. att det ska vara för civilingenjör Datateknik Chalmers.
-- [x] Vem bestämmer om hedersbetygelser? 
+- [X] Vi borde ha samma wording i 8.2.1, 2.1.2 och 8.2.3
+- [X] 8.2.1 borde vara förtroendeposter
+- [X] 8.2.2 ska ha en referens till kapitel 6, inte 5.
+- [X] 8.2.3 Potentiellt stryka hela punkten då vi upprepar oss. Delen som angår mydighet kanske ska va kvar, men då kanske enbart den delen.
+- [X] 8.4 lägga till policy i listan av saker att rätta sig efter. Kanske betänka om "övriga fattade beslut" är vettigt och om man kan skriva det bättre.
+- [X] 8.5 ändra sektionskommittee till kommittee.
+- [X] Byt bort pronomen i 9.2 till "individen"
+- [X] Tolka och förtydliga 9.2
+- [X] punkt 10 borde få en subsection i stil med resten av stadgan. Potentiellt dra in både hedersmedlemm och stödmedlem in under medlemmar
+- [X] Att kontrollera hur den officiella anslagstavlan funkar
+- [X] fixa manuell linebreak i 13.2.1
+- [X] Fixa grammatik i 13.2.2
+- [X] Förtydliga sektionsavgift i 14.1 (Att det går genom kåren)
+- [X] Förtydliga administrationsavgif i 14.2 (Att det går genom sektionen)
+- [X] Att korrigera 15.2 på samma sätt som för medlemmar, d.v.s. att det ska vara för civilingenjör Datateknik Chalmers.
+- [X] Vem bestämmer om hedersbetygelser?
       Definera vem som bestämmer? Skriva om 18.1 till "Beslut om Hedersbetygelser" med "Teknologsektionen som tack 
       eller hedersbetygelse besluta om att dela ut barspeglar till en person genom sektionsmötet."
-- [x] Ifall DNS avsätts, interim DNS
-- [x] Ifall revisorer avsätts, interim revisorer
-- [x] Kalla revisorer lekmannarevisorer överallt?
-- [x] Ang. firmatecknare: Kanske borde kallas för sektionskassören (och inte vice) (då det är så de benämns av alla) och också ha ansvaret att teckna sektionens firma då vi behöver båda.
+- [X] Ifall DNS avsätts, interim DNS
+- [X] Ifall revisorer avsätts, interim revisorer
+- [X] Kalla revisorer lekmannarevisorer överallt?
+- [X] Ang. firmatecknare: Kanske borde kallas för sektionskassören (och inte vice) (då det är så de benämns av alla) och också ha ansvaret att teckna sektionens firma då vi behöver båda.
 
-* Reglemente [16/20]
-- [x] Att ha paragraftecken på sections
-- [x] Att lägga till val av vice mötesordf under 1.1.1
-- [x] Att definera vad mötesordförande, vice ordförande och sekreterare har för ansvar under mötet.
-- [x] Att göra THP till en kommittee??? WTF. Det visar sig att de har allt i former av skyldigheter och rättigheter som alla andra kommitteer förutom det att de rent krasst sett inte har rätten att använda våra namn och symboler. - JA, gör detta.
-- [x] 1.4.2: Ta bort den explicita referensen.
-- [x] Göra uppdraget mer diffust, t.ex. ska man inte säga "Talhen ÄR sektionsmötets ordförande" utan snarare "Talhen nomineras alltid till mötets ordförande"
-- [x] När tas beslut någonsin från THP? (1.4.5) - Vi behöver undersöka detta mer men vi tror det ska bort/bytas till mötesordförandes roll.
-- [x] 2.1.4 Kanske borde kallas för sektionskassör (då det är så de benämns av alla) och också ha ansvaret att teckna sektionens firma då vi behöver båda.
-- [x] 2.1.5 sektionssekreterare istället för styrelse.
-- [x] 2.1.5 Lägga till något om GDPR/Drive ansvarig
-- [x] 2.1.7 Ledamot istället för Medlemm.
-- [x] Definera Val till styret!! Typ genom att man går till inval av presidiet och sedan till inval av de respektive ordförande i sektionsstyrelsen.
-- [x] 2.3 Byt till ledamot.
-- [x] Att i samtliga instanser i punkt 3 byta plats på subsubsections ansvar och ledamöter.
-- [x] korrigera mandatperiod-wording för kommitteer med 1jan-31dec så de har samma. (Dnollk, DMnollk, bakaD, DSL)
-- [x] Att kommitteer som väljer ordf internt inte får ha 0-x medlemmar p.g.a. 8.1.1 i stadgan
-- [x] Utöka DatE-IT kapitlet så de är i stil med kommitteernas definitioner.
+* Reglemente [17/20]
+- [X] Att ha paragraftecken på sections
+- [X] Att lägga till val av vice mötesordf under 1.1.1
+- [X] Att definera vad mötesordförande, vice ordförande och sekreterare har för ansvar under mötet.
+- [X] Att göra THP till en kommittee??? WTF. Det visar sig att de har allt i former av skyldigheter och rättigheter som alla andra kommitteer förutom det att de rent krasst sett inte har rätten att använda våra namn och symboler. - JA, gör detta.
+- [X] 1.4.2: Ta bort den explicita referensen.
+- [X] Göra uppdraget mer diffust, t.ex. ska man inte säga "Talhen ÄR sektionsmötets ordförande" utan snarare "Talhen nomineras alltid till mötets ordförande"
+- [X] När tas beslut någonsin från THP? (1.4.5) - Vi behöver undersöka detta mer men vi tror det ska bort/bytas till mötesordförandes roll.
+- [X] 2.1.4 Kanske borde kallas för sektionskassör (då det är så de benämns av alla) och också ha ansvaret att teckna sektionens firma då vi behöver båda.
+- [X] 2.1.5 sektionssekreterare istället för styrelse.
+- [X] 2.1.5 Lägga till något om GDPR/Drive ansvarig
+- [X] 2.1.7 Ledamot istället för Medlemm.
+- [X] Definera Val till styret!! Typ genom att man går till inval av presidiet och sedan till inval av de respektive ordförande i sektionsstyrelsen.
+- [X] 2.3 Byt till ledamot.
+- [X] Att i samtliga instanser i punkt 3 byta plats på subsubsections ansvar och ledamöter.
+- [X] korrigera mandatperiod-wording för kommitteer med 1jan-31dec så de har samma. (Dnollk, DMnollk, bakaD, DSL)
+- [X] Att kommitteer som väljer ordf internt inte får ha 0-x medlemmar p.g.a. 8.1.1 i stadgan
+- [X] Utöka DatE-IT kapitlet så de är i stil med kommitteernas definitioner.
 - [ ] Byt namn på DatE-IT så det är en projektgrupp istället för kommittee (avoid confusion regarding elections)
 - [ ] Uppdatera DatE-IT fyllnadsval så det matchar verkligheten (de har inval genom dateitstyrelsen).
 - [ ] Bättre definera våran officiella anslagstavla. Typ stjäla den som finns i PR policy och sedan deffa om i policyn att använda den officiella anslagstavlan.
 
 * Ekonomiska reglemente [4/4]
-- [x] paragrafer på allt.
-- [x] Section names
-- [x] Fixa THP så det inte är ett special case i 1.1
-- [x] Gör repskläderna ha ett maxtak och formulera det kapitlet som det görs i förmåner.
+- [X] paragrafer på allt.
+- [X] Section names
+- [X] Fixa THP så det inte är ett special case i 1.1
+- [X] Gör repskläderna ha ett maxtak och formulera det kapitlet som det görs i förmåner.
