@@ -60,7 +60,7 @@
 - [X] Kalla revisorer lekmannarevisorer överallt?
 - [X] Ang. firmatecknare: Kanske borde kallas för sektionskassören (och inte vice) (då det är så de benämns av alla) och också ha ansvaret att teckna sektionens firma då vi behöver båda.
 
-* Reglemente [19/20]
+* Reglemente [20/20]
 - [X] Att ha paragraftecken på sections
 - [X] Att lägga till val av vice mötesordf under 1.1.1
 - [X] Att definera vad mötesordförande, vice ordförande och sekreterare har för ansvar under mötet.
@@ -80,7 +80,7 @@
 - [X] Utöka DatE-IT kapitlet så de är i stil med kommitteernas definitioner.
 - [X] Byt namn på DatE-IT så det är en projektgrupp istället för kommittee (avoid confusion regarding elections)
 - [X] Uppdatera DatE-IT fyllnadsval så det matchar verkligheten (de har inval genom dateitstyrelsen).
-- [ ] Bättre definera våran officiella anslagstavla. Typ stjäla den som finns i PR policy och sedan deffa om i policyn att använda den officiella anslagstavlan.
+- [X] Bättre definera våran officiella anslagstavla. Typ stjäla den som finns i PR policy och sedan deffa om i policyn att använda den officiella anslagstavlan.
 
 * Ekonomiska reglemente [4/4]
 - [X] paragrafer på allt.
