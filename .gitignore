@@ -25,3 +25,6 @@
 *.fls
 *.xdv
 *aux/
+
+.direnv/
+**/.auctex-auto
