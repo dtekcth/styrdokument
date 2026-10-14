@@ -1,0 +1,422 @@
+% =====================================================================
+%  Policy: Incidenthantering - Datateknologsektionen
+%
+%  Fristående dokument: fungerar med pdfLaTeX, XeLaTeX och LuaLaTeX
+%  (Overleaf: ladda upp bara den här filen, valfri kompilator).
+%  Inga extra filer behövs - loggan ligger inbäddad längre ner.
+%
+%  VAD REDIGERAR JAG?
+%   - Titel och datum: raderna under "REDIGERA HÄR" nedan.
+%   - Text: allt efter raden "begin document". Kapitel = \section,
+%     underkapitel = \subsection.
+%   - Ny åtgärd i 5.1: kopiera en rad \atgard{Namn}{Beskrivning}.
+%   - Punktlista: \begin{itemize} \item ... \end{itemize}
+%   - Fyll i platshållarna [DATUM] och [PARAGRAF].
+%   - Prova gärna att kompilera efter varje ändring; kompileringsfel
+%     pekar på raden som är fel.
+% =====================================================================
+
+\documentclass[11pt,a4paper]{article}
+
+% ------------------------- REDIGERA HÄR ------------------------------
+\newcommand{\dokumenttitel}{Policy: Incidenthantering}  % rubrik + sidhuvud
+\newcommand{\dokumentdatum}{2026--10--14}                     % antagandedatum
+% ---------------------------------------------------------------------
+
+% ---------- typsnitt och språk (Latin Modern, svenska) ----------
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+  \usepackage[swedish]{babel}
+\else
+  \usepackage{fontspec}
+  \usepackage{polyglossia}
+  \setdefaultlanguage{swedish}
+\fi
+
+\usepackage[a4paper,left=89.3pt,right=89.3pt,top=120.5pt,bottom=111pt,headheight=45pt,headsep=18pt,footskip=15.8pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage[nobottomtitles*]{titlesec}
+\usepackage[table]{xcolor}
+\usepackage{booktabs}
+\usepackage{needspace}
+\usepackage{etoolbox}
+\usepackage{pgf}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\raggedbottom
+
+% ---------- avoid awkward page breaks ----------
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+\interlinepenalty=0
+\brokenpenalty=10000
+
+% ---------- section styling (as in the styret meeting notice) ----------
+\definecolor{headshade}{gray}{0.92}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{0.6em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{18pt}{8pt}
+\titlespacing*{\subsection}{0pt}{16pt}{6pt}
+
+\pretocmd{\section}{\Needspace*{4\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace*{3\baselineskip}}{}{}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+}
+
+% ---------- header / footer ----------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\footruleskip}{-5.4pt}
+% header rule starts to the right of the logo
+\renewcommand{\headrule}{\hbox to\headwidth{\hspace*{45.3pt}\vrule height\headrulewidth depth 0pt width \dimexpr\headwidth-45.3pt\relax}\vskip-\headrulewidth}
+
+\fancyhead[L]{%
+  \begin{minipage}[t]{43.75pt}\vspace{0pt}%
+    \dsteklogo%
+  \end{minipage}%
+  \hspace{8pt}%
+  \begin{minipage}[t]{0.6\headwidth}\vspace{0pt}%
+    \textbf{Datateknologsektionen}\\
+    Chalmers Studentkår\\
+    \dokumenttitel
+  \end{minipage}%
+}
+\fancyhead[R]{%
+  \begin{minipage}[t]{0.25\headwidth}\vspace{0pt}%
+    \raggedleft
+    Sida \thepage\ av \pageref{LastPage}\\
+    \dokumentdatum{}
+  \end{minipage}%
+}
+
+\fancyfoot[L]{%
+  \begin{minipage}[t]{0.5\headwidth}\vspace{0pt}%
+  Datateknologsektionen\\
+  Rännvägen 8\\
+  412 58 Göteborg
+  \end{minipage}%
+}
+\fancyfoot[R]{%
+  \begin{minipage}[t]{0.4\headwidth}\vspace{0pt}%
+  \raggedleft
+  \href{mailto:styret@dtek.se}{styret@dtek.se}\\
+  \href{https://www.dtek.se}{www.dtek.se}
+  \end{minipage}%
+}
+
+% ---------- hjälpkommandon ----------
+\newcommand{\atgard}[2]{\subsubsection*{#1}#2\par}
+\setlist[itemize]{topsep=2pt, itemsep=4pt, parsep=0pt, itemindent=0pt, leftmargin=1.4em}
+\setlist[itemize,2]{leftmargin=1.6em}
+
+
+% ---------- LOGOTYP (vektorgrafik, behöver inte ändras) ----------
+\newcommand{\dsteklogo}{\scalebox{0.951}{\begin{pgfpicture}
+\pgfpathrectangle{\pgfpointorigin}{\pgfqpoint{46pt}{46pt}}\pgfusepath{use as bounding box}
+\definecolor{ls}{rgb}{0.000,0.000,0.000}\pgfsetstrokecolor{ls}\pgfsetlinewidth{1.60pt}\pgfpathmoveto{\pgfqpoint{1.09pt}{23.47pt}}\pgfpathcurveto{\pgfqpoint{1.10pt}{35.59pt}}{\pgfqpoint{10.90pt}{45.38pt}}{\pgfqpoint{22.89pt}{45.42pt}}\pgfpathcurveto{\pgfqpoint{35.02pt}{45.38pt}}{\pgfqpoint{44.82pt}{35.59pt}}{\pgfqpoint{44.85pt}{23.47pt}}\pgfpathcurveto{\pgfqpoint{44.82pt}{11.47pt}}{\pgfqpoint{35.02pt}{1.67pt}}{\pgfqpoint{22.89pt}{1.67pt}}\pgfpathcurveto{\pgfqpoint{10.90pt}{1.67pt}}{\pgfqpoint{1.10pt}{11.47pt}}{\pgfqpoint{1.09pt}{23.47pt}}\pgfusepath{stroke}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{4.60pt}{25.31pt}}\pgfpathcurveto{\pgfqpoint{4.83pt}{25.30pt}}{\pgfqpoint{4.98pt}{25.33pt}}{\pgfqpoint{5.14pt}{25.43pt}}\pgfpathcurveto{\pgfqpoint{5.42pt}{25.59pt}}{\pgfqpoint{5.61pt}{25.90pt}}{\pgfqpoint{5.66pt}{26.29pt}}\pgfpathcurveto{\pgfqpoint{5.75pt}{27.02pt}}{\pgfqpoint{5.28pt}{27.54pt}}{\pgfqpoint{4.43pt}{27.64pt}}\pgfpathcurveto{\pgfqpoint{3.60pt}{27.75pt}}{\pgfqpoint{3.02pt}{27.35pt}}{\pgfqpoint{2.93pt}{26.63pt}}\pgfpathcurveto{\pgfqpoint{2.85pt}{25.98pt}}{\pgfqpoint{3.18pt}{25.51pt}}{\pgfqpoint{3.77pt}{25.40pt}}\pgfpathlineto{\pgfqpoint{3.83pt}{25.92pt}}\pgfpathcurveto{\pgfqpoint{3.50pt}{26.00pt}}{\pgfqpoint{3.34pt}{26.23pt}}{\pgfqpoint{3.38pt}{26.56pt}}\pgfpathcurveto{\pgfqpoint{3.43pt}{26.98pt}}{\pgfqpoint{3.80pt}{27.18pt}}{\pgfqpoint{4.36pt}{27.11pt}}\pgfpathcurveto{\pgfqpoint{4.94pt}{27.04pt}}{\pgfqpoint{5.25pt}{26.74pt}}{\pgfqpoint{5.20pt}{26.32pt}}\pgfpathcurveto{\pgfqpoint{5.18pt}{26.14pt}}{\pgfqpoint{5.09pt}{25.99pt}}{\pgfqpoint{4.96pt}{25.91pt}}\pgfpathcurveto{\pgfqpoint{4.88pt}{25.86pt}}{\pgfqpoint{4.81pt}{25.84pt}}{\pgfqpoint{4.66pt}{25.82pt}}\pgfpathlineto{\pgfqpoint{4.60pt}{25.31pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{4.08pt}{23.27pt}}\pgfpathlineto{\pgfqpoint{2.89pt}{23.24pt}}\pgfpathlineto{\pgfqpoint{2.90pt}{22.70pt}}\pgfpathlineto{\pgfqpoint{5.53pt}{22.75pt}}\pgfpathlineto{\pgfqpoint{5.52pt}{23.30pt}}\pgfpathlineto{\pgfqpoint{4.53pt}{23.28pt}}\pgfpathlineto{\pgfqpoint{4.51pt}{24.32pt}}\pgfpathlineto{\pgfqpoint{5.50pt}{24.34pt}}\pgfpathlineto{\pgfqpoint{5.49pt}{24.88pt}}\pgfpathlineto{\pgfqpoint{2.86pt}{24.83pt}}\pgfpathlineto{\pgfqpoint{2.87pt}{24.28pt}}\pgfpathlineto{\pgfqpoint{4.07pt}{24.31pt}}\pgfpathlineto{\pgfqpoint{4.08pt}{23.27pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{3.67pt}{20.48pt}}\pgfpathlineto{\pgfqpoint{3.17pt}{20.23pt}}\pgfpathlineto{\pgfqpoint{3.26pt}{19.68pt}}\pgfpathlineto{\pgfqpoint{5.72pt}{21.00pt}}\pgfpathlineto{\pgfqpoint{5.62pt}{21.59pt}}\pgfpathlineto{\pgfqpoint{2.87pt}{22.09pt}}\pgfpathlineto{\pgfqpoint{2.96pt}{21.55pt}}\pgfpathlineto{\pgfqpoint{3.51pt}{21.46pt}}\pgfpathlineto{\pgfqpoint{3.67pt}{20.48pt}}\pgfpathmoveto{\pgfqpoint{4.09pt}{20.70pt}}\pgfpathlineto{\pgfqpoint{3.98pt}{21.38pt}}\pgfpathlineto{\pgfqpoint{5.06pt}{21.20pt}}\pgfpathlineto{\pgfqpoint{4.09pt}{20.70pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{6.10pt}{19.18pt}}\pgfpathlineto{\pgfqpoint{5.96pt}{19.70pt}}\pgfpathlineto{\pgfqpoint{3.41pt}{19.02pt}}\pgfpathlineto{\pgfqpoint{3.88pt}{17.27pt}}\pgfpathlineto{\pgfqpoint{4.32pt}{17.39pt}}\pgfpathlineto{\pgfqpoint{3.99pt}{18.61pt}}\pgfpathlineto{\pgfqpoint{6.10pt}{19.18pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{6.17pt}{16.98pt}}\pgfpathlineto{\pgfqpoint{4.47pt}{15.75pt}}\pgfpathlineto{\pgfqpoint{4.68pt}{15.25pt}}\pgfpathlineto{\pgfqpoint{6.74pt}{15.62pt}}\pgfpathlineto{\pgfqpoint{4.86pt}{14.82pt}}\pgfpathlineto{\pgfqpoint{5.07pt}{14.32pt}}\pgfpathlineto{\pgfqpoint{7.49pt}{15.35pt}}\pgfpathlineto{\pgfqpoint{7.17pt}{16.10pt}}\pgfpathlineto{\pgfqpoint{5.07pt}{15.70pt}}\pgfpathlineto{\pgfqpoint{6.80pt}{16.96pt}}\pgfpathlineto{\pgfqpoint{6.49pt}{17.70pt}}\pgfpathlineto{\pgfqpoint{4.07pt}{16.68pt}}\pgfpathlineto{\pgfqpoint{4.28pt}{16.18pt}}\pgfpathlineto{\pgfqpoint{6.17pt}{16.98pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{6.82pt}{13.96pt}}\pgfpathlineto{\pgfqpoint{7.53pt}{12.92pt}}\pgfpathlineto{\pgfqpoint{7.90pt}{13.17pt}}\pgfpathlineto{\pgfqpoint{7.20pt}{14.21pt}}\pgfpathlineto{\pgfqpoint{7.69pt}{14.55pt}}\pgfpathlineto{\pgfqpoint{8.45pt}{13.42pt}}\pgfpathlineto{\pgfqpoint{8.83pt}{13.67pt}}\pgfpathlineto{\pgfqpoint{7.76pt}{15.25pt}}\pgfpathlineto{\pgfqpoint{5.58pt}{13.77pt}}\pgfpathlineto{\pgfqpoint{6.68pt}{12.14pt}}\pgfpathlineto{\pgfqpoint{7.06pt}{12.40pt}}\pgfpathlineto{\pgfqpoint{6.26pt}{13.58pt}}\pgfpathlineto{\pgfqpoint{6.82pt}{13.96pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{8.20pt}{11.78pt}}\pgfpathlineto{\pgfqpoint{8.59pt}{11.29pt}}\pgfpathcurveto{\pgfqpoint{8.74pt}{11.11pt}}{\pgfqpoint{8.73pt}{10.97pt}}{\pgfqpoint{8.56pt}{10.84pt}}\pgfpathcurveto{\pgfqpoint{8.54pt}{10.82pt}}{\pgfqpoint{8.51pt}{10.80pt}}{\pgfqpoint{8.47pt}{10.77pt}}\pgfpathcurveto{\pgfqpoint{8.42pt}{10.73pt}}{\pgfqpoint{8.37pt}{10.69pt}}{\pgfqpoint{8.33pt}{10.67pt}}\pgfpathcurveto{\pgfqpoint{8.14pt}{10.51pt}}{\pgfqpoint{8.09pt}{10.45pt}}{\pgfqpoint{8.04pt}{10.31pt}}\pgfpathlineto{\pgfqpoint{8.40pt}{9.86pt}}\pgfpathlineto{\pgfqpoint{8.48pt}{9.93pt}}\pgfpathcurveto{\pgfqpoint{8.46pt}{10.02pt}}{\pgfqpoint{8.48pt}{10.08pt}}{\pgfqpoint{8.57pt}{10.15pt}}\pgfpathcurveto{\pgfqpoint{9.17pt}{10.65pt}}{\pgfqpoint{9.19pt}{10.68pt}}{\pgfqpoint{9.09pt}{11.04pt}}\pgfpathcurveto{\pgfqpoint{9.37pt}{10.88pt}}{\pgfqpoint{9.63pt}{10.90pt}}{\pgfqpoint{9.88pt}{11.10pt}}\pgfpathcurveto{\pgfqpoint{10.04pt}{11.23pt}}{\pgfqpoint{10.14pt}{11.41pt}}{\pgfqpoint{10.16pt}{11.59pt}}\pgfpathcurveto{\pgfqpoint{10.18pt}{11.76pt}}{\pgfqpoint{10.13pt}{11.92pt}}{\pgfqpoint{9.98pt}{12.10pt}}\pgfpathlineto{\pgfqpoint{9.09pt}{13.20pt}}\pgfpathlineto{\pgfqpoint{7.05pt}{11.54pt}}\pgfpathlineto{\pgfqpoint{7.39pt}{11.12pt}}\pgfpathlineto{\pgfqpoint{8.20pt}{11.78pt}}\pgfpathmoveto{\pgfqpoint{8.55pt}{12.06pt}}\pgfpathlineto{\pgfqpoint{9.08pt}{12.49pt}}\pgfpathlineto{\pgfqpoint{9.49pt}{11.98pt}}\pgfpathcurveto{\pgfqpoint{9.59pt}{11.86pt}}{\pgfqpoint{9.62pt}{11.80pt}}{\pgfqpoint{9.62pt}{11.72pt}}\pgfpathcurveto{\pgfqpoint{9.62pt}{11.63pt}}{\pgfqpoint{9.57pt}{11.55pt}}{\pgfqpoint{9.47pt}{11.47pt}}\pgfpathcurveto{\pgfqpoint{9.38pt}{11.39pt}}{\pgfqpoint{9.27pt}{11.36pt}}{\pgfqpoint{9.19pt}{11.37pt}}\pgfpathcurveto{\pgfqpoint{9.12pt}{11.38pt}}{\pgfqpoint{9.06pt}{11.43pt}}{\pgfqpoint{8.96pt}{11.55pt}}\pgfpathlineto{\pgfqpoint{8.55pt}{12.06pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{11.63pt}{9.41pt}}\pgfpathcurveto{\pgfqpoint{11.79pt}{9.59pt}}{\pgfqpoint{11.86pt}{9.74pt}}{\pgfqpoint{11.86pt}{9.94pt}}\pgfpathcurveto{\pgfqpoint{11.86pt}{10.20pt}}{\pgfqpoint{11.71pt}{10.47pt}}{\pgfqpoint{11.43pt}{10.72pt}}\pgfpathcurveto{\pgfqpoint{10.97pt}{11.15pt}}{\pgfqpoint{10.50pt}{11.18pt}}{\pgfqpoint{10.16pt}{10.79pt}}\pgfpathcurveto{\pgfqpoint{9.88pt}{10.49pt}}{\pgfqpoint{9.90pt}{10.21pt}}{\pgfqpoint{10.23pt}{9.78pt}}\pgfpathlineto{\pgfqpoint{10.45pt}{9.48pt}}\pgfpathcurveto{\pgfqpoint{10.67pt}{9.18pt}}{\pgfqpoint{10.71pt}{9.02pt}}{\pgfqpoint{10.56pt}{8.86pt}}\pgfpathcurveto{\pgfqpoint{10.41pt}{8.70pt}}{\pgfqpoint{10.17pt}{8.73pt}}{\pgfqpoint{9.93pt}{8.96pt}}\pgfpathcurveto{\pgfqpoint{9.66pt}{9.20pt}}{\pgfqpoint{9.61pt}{9.46pt}}{\pgfqpoint{9.79pt}{9.68pt}}\pgfpathlineto{\pgfqpoint{9.40pt}{10.03pt}}\pgfpathcurveto{\pgfqpoint{9.05pt}{9.59pt}}{\pgfqpoint{9.13pt}{9.11pt}}{\pgfqpoint{9.62pt}{8.65pt}}\pgfpathcurveto{\pgfqpoint{10.12pt}{8.20pt}}{\pgfqpoint{10.63pt}{8.17pt}}{\pgfqpoint{10.99pt}{8.56pt}}\pgfpathcurveto{\pgfqpoint{11.27pt}{8.87pt}}{\pgfqpoint{11.26pt}{9.17pt}}{\pgfqpoint{10.96pt}{9.56pt}}\pgfpathlineto{\pgfqpoint{10.71pt}{9.90pt}}\pgfpathcurveto{\pgfqpoint{10.47pt}{10.21pt}}{\pgfqpoint{10.44pt}{10.35pt}}{\pgfqpoint{10.57pt}{10.49pt}}\pgfpathcurveto{\pgfqpoint{10.70pt}{10.63pt}}{\pgfqpoint{10.92pt}{10.61pt}}{\pgfqpoint{11.13pt}{10.42pt}}\pgfpathcurveto{\pgfqpoint{11.38pt}{10.19pt}}{\pgfqpoint{11.42pt}{9.96pt}}{\pgfqpoint{11.26pt}{9.75pt}}\pgfpathlineto{\pgfqpoint{11.63pt}{9.41pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{15.13pt}{7.72pt}}\pgfpathlineto{\pgfqpoint{15.83pt}{7.39pt}}\pgfpathlineto{\pgfqpoint{16.02pt}{7.80pt}}\pgfpathlineto{\pgfqpoint{14.10pt}{8.69pt}}\pgfpathlineto{\pgfqpoint{13.91pt}{8.28pt}}\pgfpathlineto{\pgfqpoint{14.64pt}{7.94pt}}\pgfpathlineto{\pgfqpoint{13.72pt}{5.96pt}}\pgfpathlineto{\pgfqpoint{14.22pt}{5.73pt}}\pgfpathlineto{\pgfqpoint{15.13pt}{7.72pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{16.52pt}{6.00pt}}\pgfpathlineto{\pgfqpoint{17.71pt}{5.58pt}}\pgfpathlineto{\pgfqpoint{17.86pt}{6.01pt}}\pgfpathlineto{\pgfqpoint{16.66pt}{6.43pt}}\pgfpathlineto{\pgfqpoint{16.86pt}{6.99pt}}\pgfpathlineto{\pgfqpoint{18.15pt}{6.54pt}}\pgfpathlineto{\pgfqpoint{18.30pt}{6.97pt}}\pgfpathlineto{\pgfqpoint{16.49pt}{7.60pt}}\pgfpathlineto{\pgfqpoint{15.63pt}{5.10pt}}\pgfpathlineto{\pgfqpoint{17.49pt}{4.45pt}}\pgfpathlineto{\pgfqpoint{17.64pt}{4.88pt}}\pgfpathlineto{\pgfqpoint{16.29pt}{5.35pt}}\pgfpathlineto{\pgfqpoint{16.52pt}{6.00pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{18.86pt}{4.96pt}}\pgfpathlineto{\pgfqpoint{19.17pt}{5.19pt}}\pgfpathlineto{\pgfqpoint{19.82pt}{3.90pt}}\pgfpathlineto{\pgfqpoint{20.46pt}{3.79pt}}\pgfpathlineto{\pgfqpoint{19.57pt}{5.46pt}}\pgfpathlineto{\pgfqpoint{20.79pt}{6.39pt}}\pgfpathlineto{\pgfqpoint{20.17pt}{6.50pt}}\pgfpathlineto{\pgfqpoint{18.96pt}{5.54pt}}\pgfpathlineto{\pgfqpoint{19.16pt}{6.68pt}}\pgfpathlineto{\pgfqpoint{18.63pt}{6.77pt}}\pgfpathlineto{\pgfqpoint{18.18pt}{4.19pt}}\pgfpathlineto{\pgfqpoint{18.71pt}{4.10pt}}\pgfpathlineto{\pgfqpoint{18.86pt}{4.96pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{22.49pt}{3.70pt}}\pgfpathlineto{\pgfqpoint{23.03pt}{3.68pt}}\pgfpathlineto{\pgfqpoint{23.11pt}{6.31pt}}\pgfpathlineto{\pgfqpoint{22.57pt}{6.33pt}}\pgfpathlineto{\pgfqpoint{22.51pt}{4.54pt}}\pgfpathlineto{\pgfqpoint{21.53pt}{6.36pt}}\pgfpathlineto{\pgfqpoint{20.97pt}{6.37pt}}\pgfpathlineto{\pgfqpoint{20.89pt}{3.75pt}}\pgfpathlineto{\pgfqpoint{21.43pt}{3.73pt}}\pgfpathlineto{\pgfqpoint{21.49pt}{5.55pt}}\pgfpathlineto{\pgfqpoint{22.49pt}{3.70pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{24.28pt}{6.28pt}}\pgfpathlineto{\pgfqpoint{23.73pt}{6.24pt}}\pgfpathlineto{\pgfqpoint{23.92pt}{3.61pt}}\pgfpathlineto{\pgfqpoint{24.46pt}{3.65pt}}\pgfpathlineto{\pgfqpoint{24.28pt}{6.28pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{26.81pt}{5.92pt}}\pgfpathcurveto{\pgfqpoint{26.77pt}{6.15pt}}{\pgfqpoint{26.69pt}{6.30pt}}{\pgfqpoint{26.54pt}{6.42pt}}\pgfpathcurveto{\pgfqpoint{26.33pt}{6.58pt}}{\pgfqpoint{26.03pt}{6.63pt}}{\pgfqpoint{25.65pt}{6.57pt}}\pgfpathcurveto{\pgfqpoint{25.04pt}{6.46pt}}{\pgfqpoint{24.73pt}{6.11pt}}{\pgfqpoint{24.82pt}{5.61pt}}\pgfpathcurveto{\pgfqpoint{24.88pt}{5.21pt}}{\pgfqpoint{25.12pt}{5.05pt}}{\pgfqpoint{25.66pt}{5.04pt}}\pgfpathlineto{\pgfqpoint{26.03pt}{5.03pt}}\pgfpathcurveto{\pgfqpoint{26.40pt}{5.03pt}}{\pgfqpoint{26.55pt}{4.95pt}}{\pgfqpoint{26.58pt}{4.74pt}}\pgfpathcurveto{\pgfqpoint{26.62pt}{4.53pt}}{\pgfqpoint{26.44pt}{4.36pt}}{\pgfqpoint{26.12pt}{4.31pt}}\pgfpathcurveto{\pgfqpoint{25.76pt}{4.24pt}}{\pgfqpoint{25.54pt}{4.36pt}}{\pgfqpoint{25.47pt}{4.63pt}}\pgfpathlineto{\pgfqpoint{24.95pt}{4.54pt}}\pgfpathcurveto{\pgfqpoint{25.08pt}{4.00pt}}{\pgfqpoint{25.51pt}{3.76pt}}{\pgfqpoint{26.17pt}{3.88pt}}\pgfpathcurveto{\pgfqpoint{26.83pt}{3.99pt}}{\pgfqpoint{27.17pt}{4.37pt}}{\pgfqpoint{27.08pt}{4.89pt}}\pgfpathcurveto{\pgfqpoint{27.01pt}{5.30pt}}{\pgfqpoint{26.77pt}{5.48pt}}{\pgfqpoint{26.28pt}{5.49pt}}\pgfpathlineto{\pgfqpoint{25.86pt}{5.49pt}}\pgfpathcurveto{\pgfqpoint{25.47pt}{5.51pt}}{\pgfqpoint{25.35pt}{5.56pt}}{\pgfqpoint{25.31pt}{5.75pt}}\pgfpathcurveto{\pgfqpoint{25.28pt}{5.94pt}}{\pgfqpoint{25.43pt}{6.10pt}}{\pgfqpoint{25.70pt}{6.14pt}}\pgfpathcurveto{\pgfqpoint{26.04pt}{6.20pt}}{\pgfqpoint{26.25pt}{6.09pt}}{\pgfqpoint{26.31pt}{5.83pt}}\pgfpathlineto{\pgfqpoint{26.81pt}{5.92pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{28.03pt}{5.16pt}}\pgfpathlineto{\pgfqpoint{28.20pt}{5.51pt}}\pgfpathlineto{\pgfqpoint{29.38pt}{4.67pt}}\pgfpathlineto{\pgfqpoint{30.00pt}{4.88pt}}\pgfpathlineto{\pgfqpoint{28.43pt}{5.94pt}}\pgfpathlineto{\pgfqpoint{29.08pt}{7.34pt}}\pgfpathlineto{\pgfqpoint{28.47pt}{7.14pt}}\pgfpathlineto{\pgfqpoint{27.85pt}{5.73pt}}\pgfpathlineto{\pgfqpoint{27.49pt}{6.82pt}}\pgfpathlineto{\pgfqpoint{26.98pt}{6.65pt}}\pgfpathlineto{\pgfqpoint{27.79pt}{4.16pt}}\pgfpathlineto{\pgfqpoint{28.30pt}{4.32pt}}\pgfpathlineto{\pgfqpoint{28.03pt}{5.16pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{31.81pt}{6.31pt}}\pgfpathlineto{\pgfqpoint{32.20pt}{5.91pt}}\pgfpathlineto{\pgfqpoint{32.70pt}{6.15pt}}\pgfpathlineto{\pgfqpoint{30.73pt}{8.12pt}}\pgfpathlineto{\pgfqpoint{30.19pt}{7.86pt}}\pgfpathlineto{\pgfqpoint{30.51pt}{5.08pt}}\pgfpathlineto{\pgfqpoint{31.00pt}{5.32pt}}\pgfpathlineto{\pgfqpoint{30.93pt}{5.87pt}}\pgfpathlineto{\pgfqpoint{31.81pt}{6.31pt}}\pgfpathmoveto{\pgfqpoint{31.48pt}{6.65pt}}\pgfpathlineto{\pgfqpoint{30.87pt}{6.35pt}}\pgfpathlineto{\pgfqpoint{30.72pt}{7.42pt}}\pgfpathlineto{\pgfqpoint{31.48pt}{6.65pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{35.71pt}{9.69pt}}\pgfpathlineto{\pgfqpoint{36.48pt}{8.77pt}}\pgfpathlineto{\pgfqpoint{36.90pt}{9.12pt}}\pgfpathlineto{\pgfqpoint{35.21pt}{11.14pt}}\pgfpathlineto{\pgfqpoint{34.79pt}{10.79pt}}\pgfpathlineto{\pgfqpoint{35.42pt}{10.03pt}}\pgfpathlineto{\pgfqpoint{34.62pt}{9.37pt}}\pgfpathlineto{\pgfqpoint{33.99pt}{10.13pt}}\pgfpathlineto{\pgfqpoint{33.58pt}{9.78pt}}\pgfpathlineto{\pgfqpoint{35.26pt}{7.76pt}}\pgfpathlineto{\pgfqpoint{35.68pt}{8.10pt}}\pgfpathlineto{\pgfqpoint{34.91pt}{9.02pt}}\pgfpathlineto{\pgfqpoint{35.71pt}{9.69pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{35.71pt}{12.69pt}}\pgfpathlineto{\pgfqpoint{35.44pt}{12.40pt}}\pgfpathlineto{\pgfqpoint{35.77pt}{12.11pt}}\pgfpathlineto{\pgfqpoint{36.03pt}{12.40pt}}\pgfpathlineto{\pgfqpoint{35.71pt}{12.69pt}}\pgfpathmoveto{\pgfqpoint{36.16pt}{13.19pt}}\pgfpathlineto{\pgfqpoint{35.89pt}{12.90pt}}\pgfpathlineto{\pgfqpoint{36.22pt}{12.60pt}}\pgfpathlineto{\pgfqpoint{36.48pt}{12.90pt}}\pgfpathlineto{\pgfqpoint{36.16pt}{13.19pt}}\pgfpathmoveto{\pgfqpoint{36.28pt}{12.35pt}}\pgfpathcurveto{\pgfqpoint{36.03pt}{12.08pt}}{\pgfqpoint{35.92pt}{11.78pt}}{\pgfqpoint{35.95pt}{11.45pt}}\pgfpathcurveto{\pgfqpoint{35.98pt}{11.11pt}}{\pgfqpoint{36.16pt}{10.76pt}}{\pgfqpoint{36.45pt}{10.50pt}}\pgfpathcurveto{\pgfqpoint{36.75pt}{10.23pt}}{\pgfqpoint{37.11pt}{10.09pt}}{\pgfqpoint{37.45pt}{10.09pt}}\pgfpathcurveto{\pgfqpoint{37.78pt}{10.10pt}}{\pgfqpoint{38.07pt}{10.23pt}}{\pgfqpoint{38.32pt}{10.51pt}}\pgfpathcurveto{\pgfqpoint{38.57pt}{10.79pt}}{\pgfqpoint{38.68pt}{11.09pt}}{\pgfqpoint{38.65pt}{11.42pt}}\pgfpathcurveto{\pgfqpoint{38.63pt}{11.75pt}}{\pgfqpoint{38.44pt}{12.11pt}}{\pgfqpoint{38.16pt}{12.36pt}}\pgfpathcurveto{\pgfqpoint{37.86pt}{12.63pt}}{\pgfqpoint{37.50pt}{12.78pt}}{\pgfqpoint{37.15pt}{12.78pt}}\pgfpathcurveto{\pgfqpoint{36.82pt}{12.77pt}}{\pgfqpoint{36.53pt}{12.63pt}}{\pgfqpoint{36.28pt}{12.35pt}}\pgfpathmoveto{\pgfqpoint{36.62pt}{12.05pt}}\pgfpathcurveto{\pgfqpoint{36.92pt}{12.38pt}}{\pgfqpoint{37.37pt}{12.34pt}}{\pgfqpoint{37.80pt}{11.96pt}}\pgfpathcurveto{\pgfqpoint{38.20pt}{11.60pt}}{\pgfqpoint{38.27pt}{11.14pt}}{\pgfqpoint{37.98pt}{10.82pt}}\pgfpathcurveto{\pgfqpoint{37.69pt}{10.50pt}}{\pgfqpoint{37.22pt}{10.53pt}}{\pgfqpoint{36.82pt}{10.90pt}}\pgfpathcurveto{\pgfqpoint{36.41pt}{11.27pt}}{\pgfqpoint{36.33pt}{11.72pt}}{\pgfqpoint{36.62pt}{12.05pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{39.45pt}{14.70pt}}\pgfpathlineto{\pgfqpoint{38.92pt}{13.79pt}}\pgfpathlineto{\pgfqpoint{39.31pt}{13.56pt}}\pgfpathlineto{\pgfqpoint{39.61pt}{14.08pt}}\pgfpathcurveto{\pgfqpoint{39.74pt}{14.00pt}}{\pgfqpoint{39.80pt}{13.92pt}}{\pgfqpoint{39.84pt}{13.80pt}}\pgfpathcurveto{\pgfqpoint{39.91pt}{13.61pt}}{\pgfqpoint{39.90pt}{13.39pt}}{\pgfqpoint{39.79pt}{13.21pt}}\pgfpathcurveto{\pgfqpoint{39.57pt}{12.83pt}}{\pgfqpoint{39.08pt}{12.75pt}}{\pgfqpoint{38.61pt}{13.02pt}}\pgfpathcurveto{\pgfqpoint{38.12pt}{13.30pt}}{\pgfqpoint{37.96pt}{13.71pt}}{\pgfqpoint{38.19pt}{14.11pt}}\pgfpathcurveto{\pgfqpoint{38.28pt}{14.28pt}}{\pgfqpoint{38.41pt}{14.39pt}}{\pgfqpoint{38.56pt}{14.44pt}}\pgfpathcurveto{\pgfqpoint{38.66pt}{14.47pt}}{\pgfqpoint{38.73pt}{14.48pt}}{\pgfqpoint{38.87pt}{14.45pt}}\pgfpathlineto{\pgfqpoint{39.12pt}{14.90pt}}\pgfpathcurveto{\pgfqpoint{38.62pt}{15.11pt}}{\pgfqpoint{38.10pt}{14.90pt}}{\pgfqpoint{37.78pt}{14.34pt}}\pgfpathcurveto{\pgfqpoint{37.41pt}{13.68pt}}{\pgfqpoint{37.63pt}{12.95pt}}{\pgfqpoint{38.35pt}{12.55pt}}\pgfpathcurveto{\pgfqpoint{39.04pt}{12.15pt}}{\pgfqpoint{39.81pt}{12.31pt}}{\pgfqpoint{40.16pt}{12.93pt}}\pgfpathcurveto{\pgfqpoint{40.34pt}{13.23pt}}{\pgfqpoint{40.35pt}{13.51pt}}{\pgfqpoint{40.19pt}{13.83pt}}\pgfpathlineto{\pgfqpoint{40.52pt}{13.71pt}}\pgfpathlineto{\pgfqpoint{40.69pt}{14.00pt}}\pgfpathlineto{\pgfqpoint{39.45pt}{14.70pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{40.10pt}{17.25pt}}\pgfpathcurveto{\pgfqpoint{39.88pt}{17.35pt}}{\pgfqpoint{39.71pt}{17.37pt}}{\pgfqpoint{39.52pt}{17.31pt}}\pgfpathcurveto{\pgfqpoint{39.27pt}{17.23pt}}{\pgfqpoint{39.05pt}{17.01pt}}{\pgfqpoint{38.90pt}{16.67pt}}\pgfpathcurveto{\pgfqpoint{38.63pt}{16.09pt}}{\pgfqpoint{38.75pt}{15.64pt}}{\pgfqpoint{39.21pt}{15.42pt}}\pgfpathcurveto{\pgfqpoint{39.58pt}{15.25pt}}{\pgfqpoint{39.85pt}{15.36pt}}{\pgfqpoint{40.17pt}{15.80pt}}\pgfpathlineto{\pgfqpoint{40.39pt}{16.10pt}}\pgfpathcurveto{\pgfqpoint{40.60pt}{16.40pt}}{\pgfqpoint{40.75pt}{16.48pt}}{\pgfqpoint{40.94pt}{16.39pt}}\pgfpathcurveto{\pgfqpoint{41.14pt}{16.30pt}}{\pgfqpoint{41.18pt}{16.06pt}}{\pgfqpoint{41.04pt}{15.76pt}}\pgfpathcurveto{\pgfqpoint{40.88pt}{15.43pt}}{\pgfqpoint{40.66pt}{15.30pt}}{\pgfqpoint{40.39pt}{15.41pt}}\pgfpathlineto{\pgfqpoint{40.17pt}{14.93pt}}\pgfpathcurveto{\pgfqpoint{40.70pt}{14.72pt}}{\pgfqpoint{41.14pt}{14.94pt}}{\pgfqpoint{41.42pt}{15.55pt}}\pgfpathcurveto{\pgfqpoint{41.71pt}{16.17pt}}{\pgfqpoint{41.59pt}{16.67pt}}{\pgfqpoint{41.10pt}{16.89pt}}\pgfpathcurveto{\pgfqpoint{40.72pt}{17.07pt}}{\pgfqpoint{40.44pt}{16.97pt}}{\pgfqpoint{40.15pt}{16.56pt}}\pgfpathlineto{\pgfqpoint{39.90pt}{16.22pt}}\pgfpathcurveto{\pgfqpoint{39.67pt}{15.90pt}}{\pgfqpoint{39.56pt}{15.83pt}}{\pgfqpoint{39.39pt}{15.91pt}}\pgfpathcurveto{\pgfqpoint{39.20pt}{16.00pt}}{\pgfqpoint{39.16pt}{16.21pt}}{\pgfqpoint{39.28pt}{16.46pt}}\pgfpathcurveto{\pgfqpoint{39.42pt}{16.77pt}}{\pgfqpoint{39.63pt}{16.89pt}}{\pgfqpoint{39.88pt}{16.79pt}}\pgfpathlineto{\pgfqpoint{40.10pt}{17.25pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{41.35pt}{18.08pt}}\pgfpathlineto{\pgfqpoint{41.15pt}{18.42pt}}\pgfpathlineto{\pgfqpoint{42.51pt}{18.92pt}}\pgfpathlineto{\pgfqpoint{42.69pt}{19.54pt}}\pgfpathlineto{\pgfqpoint{40.93pt}{18.84pt}}\pgfpathlineto{\pgfqpoint{40.13pt}{20.17pt}}\pgfpathlineto{\pgfqpoint{39.95pt}{19.56pt}}\pgfpathlineto{\pgfqpoint{40.77pt}{18.25pt}}\pgfpathlineto{\pgfqpoint{39.67pt}{18.57pt}}\pgfpathlineto{\pgfqpoint{39.51pt}{18.05pt}}\pgfpathlineto{\pgfqpoint{42.04pt}{17.31pt}}\pgfpathlineto{\pgfqpoint{42.19pt}{17.83pt}}\pgfpathlineto{\pgfqpoint{41.35pt}{18.08pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{40.29pt}{21.49pt}}\pgfpathcurveto{\pgfqpoint{40.24pt}{21.13pt}}{\pgfqpoint{40.33pt}{20.82pt}}{\pgfqpoint{40.54pt}{20.56pt}}\pgfpathcurveto{\pgfqpoint{40.76pt}{20.30pt}}{\pgfqpoint{41.11pt}{20.13pt}}{\pgfqpoint{41.50pt}{20.08pt}}\pgfpathcurveto{\pgfqpoint{41.89pt}{20.03pt}}{\pgfqpoint{42.27pt}{20.12pt}}{\pgfqpoint{42.55pt}{20.32pt}}\pgfpathcurveto{\pgfqpoint{42.82pt}{20.52pt}}{\pgfqpoint{42.97pt}{20.79pt}}{\pgfqpoint{43.01pt}{21.17pt}}\pgfpathcurveto{\pgfqpoint{43.06pt}{21.54pt}}{\pgfqpoint{42.98pt}{21.85pt}}{\pgfqpoint{42.76pt}{22.10pt}}\pgfpathcurveto{\pgfqpoint{42.55pt}{22.35pt}}{\pgfqpoint{42.19pt}{22.54pt}}{\pgfqpoint{41.82pt}{22.58pt}}\pgfpathcurveto{\pgfqpoint{41.41pt}{22.63pt}}{\pgfqpoint{41.03pt}{22.54pt}}{\pgfqpoint{40.76pt}{22.34pt}}\pgfpathcurveto{\pgfqpoint{40.48pt}{22.15pt}}{\pgfqpoint{40.33pt}{21.87pt}}{\pgfqpoint{40.29pt}{21.49pt}}\pgfpathmoveto{\pgfqpoint{40.75pt}{21.44pt}}\pgfpathcurveto{\pgfqpoint{40.80pt}{21.88pt}}{\pgfqpoint{41.19pt}{22.12pt}}{\pgfqpoint{41.75pt}{22.05pt}}\pgfpathcurveto{\pgfqpoint{42.29pt}{21.98pt}}{\pgfqpoint{42.61pt}{21.65pt}}{\pgfqpoint{42.56pt}{21.22pt}}\pgfpathcurveto{\pgfqpoint{42.51pt}{20.79pt}}{\pgfqpoint{42.11pt}{20.55pt}}{\pgfqpoint{41.57pt}{20.61pt}}\pgfpathcurveto{\pgfqpoint{41.02pt}{20.68pt}}{\pgfqpoint{40.69pt}{21.01pt}}{\pgfqpoint{40.75pt}{21.44pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{40.60pt}{23.60pt}}\pgfpathlineto{\pgfqpoint{40.61pt}{23.06pt}}\pgfpathlineto{\pgfqpoint{43.24pt}{23.11pt}}\pgfpathlineto{\pgfqpoint{43.20pt}{24.92pt}}\pgfpathlineto{\pgfqpoint{42.75pt}{24.91pt}}\pgfpathlineto{\pgfqpoint{42.78pt}{23.65pt}}\pgfpathlineto{\pgfqpoint{40.60pt}{23.60pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{42.43pt}{27.09pt}}\pgfpathlineto{\pgfqpoint{42.93pt}{27.35pt}}\pgfpathlineto{\pgfqpoint{42.84pt}{27.90pt}}\pgfpathlineto{\pgfqpoint{40.38pt}{26.58pt}}\pgfpathlineto{\pgfqpoint{40.48pt}{25.99pt}}\pgfpathlineto{\pgfqpoint{43.23pt}{25.49pt}}\pgfpathlineto{\pgfqpoint{43.14pt}{26.03pt}}\pgfpathlineto{\pgfqpoint{42.59pt}{26.12pt}}\pgfpathlineto{\pgfqpoint{42.43pt}{27.09pt}}\pgfpathmoveto{\pgfqpoint{42.01pt}{26.88pt}}\pgfpathlineto{\pgfqpoint{42.12pt}{26.20pt}}\pgfpathlineto{\pgfqpoint{41.04pt}{26.37pt}}\pgfpathlineto{\pgfqpoint{42.01pt}{26.88pt}}\pgfusepath{fill}
+\definecolor{ls}{rgb}{0.137,0.122,0.125}\pgfsetstrokecolor{ls}\pgfsetlinewidth{0.18pt}\pgfpathmoveto{\pgfqpoint{5.10pt}{32.98pt}}\pgfpathlineto{\pgfqpoint{5.82pt}{32.26pt}}\pgfpathlineto{\pgfqpoint{5.35pt}{31.34pt}}\pgfpathlineto{\pgfqpoint{6.30pt}{31.81pt}}\pgfpathlineto{\pgfqpoint{7.04pt}{31.07pt}}\pgfpathlineto{\pgfqpoint{6.86pt}{32.09pt}}\pgfpathlineto{\pgfqpoint{7.78pt}{32.55pt}}\pgfpathlineto{\pgfqpoint{6.75pt}{32.72pt}}\pgfpathlineto{\pgfqpoint{6.57pt}{33.74pt}}\pgfpathlineto{\pgfqpoint{6.10pt}{32.81pt}}\pgfpathlineto{\pgfqpoint{5.10pt}{32.98pt}}\pgfusepath{stroke}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{6.10pt}{32.81pt}}\pgfpathlineto{\pgfqpoint{6.57pt}{33.73pt}}\pgfpathlineto{\pgfqpoint{6.75pt}{32.71pt}}\pgfpathlineto{\pgfqpoint{7.78pt}{32.55pt}}\pgfpathlineto{\pgfqpoint{6.86pt}{32.08pt}}\pgfpathlineto{\pgfqpoint{7.03pt}{31.07pt}}\pgfpathlineto{\pgfqpoint{6.30pt}{31.81pt}}\pgfpathlineto{\pgfqpoint{5.36pt}{31.34pt}}\pgfpathlineto{\pgfqpoint{5.82pt}{32.26pt}}\pgfpathlineto{\pgfqpoint{5.10pt}{32.97pt}}\pgfpathlineto{\pgfqpoint{6.10pt}{32.81pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{11.08pt}{36.63pt}}\pgfpathlineto{\pgfqpoint{11.88pt}{37.29pt}}\pgfpathcurveto{\pgfqpoint{12.18pt}{37.54pt}}{\pgfqpoint{12.32pt}{37.77pt}}{\pgfqpoint{12.32pt}{38.05pt}}\pgfpathcurveto{\pgfqpoint{12.32pt}{38.38pt}}{\pgfqpoint{12.18pt}{38.72pt}}{\pgfqpoint{11.92pt}{39.04pt}}\pgfpathcurveto{\pgfqpoint{11.66pt}{39.35pt}}{\pgfqpoint{11.34pt}{39.55pt}}{\pgfqpoint{11.02pt}{39.61pt}}\pgfpathcurveto{\pgfqpoint{10.75pt}{39.66pt}}{\pgfqpoint{10.50pt}{39.57pt}}{\pgfqpoint{10.19pt}{39.31pt}}\pgfpathlineto{\pgfqpoint{9.40pt}{38.65pt}}\pgfpathlineto{\pgfqpoint{11.08pt}{36.63pt}}\pgfpathmoveto{\pgfqpoint{11.21pt}{37.32pt}}\pgfpathlineto{\pgfqpoint{10.10pt}{38.65pt}}\pgfpathlineto{\pgfqpoint{10.48pt}{38.96pt}}\pgfpathcurveto{\pgfqpoint{10.80pt}{39.22pt}}{\pgfqpoint{11.13pt}{39.13pt}}{\pgfqpoint{11.50pt}{38.68pt}}\pgfpathcurveto{\pgfqpoint{11.87pt}{38.24pt}}{\pgfqpoint{11.90pt}{37.89pt}}{\pgfqpoint{11.59pt}{37.63pt}}\pgfpathlineto{\pgfqpoint{11.21pt}{37.32pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{14.43pt}{39.54pt}}\pgfpathlineto{\pgfqpoint{14.84pt}{39.16pt}}\pgfpathlineto{\pgfqpoint{15.32pt}{39.43pt}}\pgfpathlineto{\pgfqpoint{13.27pt}{41.28pt}}\pgfpathlineto{\pgfqpoint{12.74pt}{40.99pt}}\pgfpathlineto{\pgfqpoint{13.20pt}{38.26pt}}\pgfpathlineto{\pgfqpoint{13.67pt}{38.52pt}}\pgfpathlineto{\pgfqpoint{13.57pt}{39.07pt}}\pgfpathlineto{\pgfqpoint{14.43pt}{39.54pt}}\pgfpathmoveto{\pgfqpoint{14.08pt}{39.86pt}}\pgfpathlineto{\pgfqpoint{13.49pt}{39.54pt}}\pgfpathlineto{\pgfqpoint{13.29pt}{40.59pt}}\pgfpathlineto{\pgfqpoint{14.08pt}{39.86pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{15.87pt}{42.02pt}}\pgfpathlineto{\pgfqpoint{16.58pt}{42.30pt}}\pgfpathlineto{\pgfqpoint{16.41pt}{42.72pt}}\pgfpathlineto{\pgfqpoint{14.46pt}{41.96pt}}\pgfpathlineto{\pgfqpoint{14.62pt}{41.54pt}}\pgfpathlineto{\pgfqpoint{15.36pt}{41.83pt}}\pgfpathlineto{\pgfqpoint{16.15pt}{39.80pt}}\pgfpathlineto{\pgfqpoint{16.65pt}{39.99pt}}\pgfpathlineto{\pgfqpoint{15.87pt}{42.02pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{19.08pt}{41.21pt}}\pgfpathlineto{\pgfqpoint{19.36pt}{40.73pt}}\pgfpathlineto{\pgfqpoint{19.90pt}{40.86pt}}\pgfpathlineto{\pgfqpoint{18.44pt}{43.21pt}}\pgfpathlineto{\pgfqpoint{17.86pt}{43.07pt}}\pgfpathlineto{\pgfqpoint{17.53pt}{40.32pt}}\pgfpathlineto{\pgfqpoint{18.07pt}{40.44pt}}\pgfpathlineto{\pgfqpoint{18.12pt}{40.99pt}}\pgfpathlineto{\pgfqpoint{19.08pt}{41.21pt}}\pgfpathmoveto{\pgfqpoint{18.83pt}{41.61pt}}\pgfpathlineto{\pgfqpoint{18.17pt}{41.46pt}}\pgfpathlineto{\pgfqpoint{18.28pt}{42.54pt}}\pgfpathlineto{\pgfqpoint{18.83pt}{41.61pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{21.24pt}{43.21pt}}\pgfpathlineto{\pgfqpoint{22.01pt}{43.27pt}}\pgfpathlineto{\pgfqpoint{21.98pt}{43.72pt}}\pgfpathlineto{\pgfqpoint{19.87pt}{43.57pt}}\pgfpathlineto{\pgfqpoint{19.90pt}{43.12pt}}\pgfpathlineto{\pgfqpoint{20.70pt}{43.17pt}}\pgfpathlineto{\pgfqpoint{20.85pt}{41.00pt}}\pgfpathlineto{\pgfqpoint{21.39pt}{41.04pt}}\pgfpathlineto{\pgfqpoint{21.24pt}{43.21pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{23.47pt}{42.33pt}}\pgfpathlineto{\pgfqpoint{24.73pt}{42.24pt}}\pgfpathlineto{\pgfqpoint{24.77pt}{42.70pt}}\pgfpathlineto{\pgfqpoint{23.50pt}{42.78pt}}\pgfpathlineto{\pgfqpoint{23.55pt}{43.38pt}}\pgfpathlineto{\pgfqpoint{24.91pt}{43.29pt}}\pgfpathlineto{\pgfqpoint{24.94pt}{43.73pt}}\pgfpathlineto{\pgfqpoint{23.04pt}{43.87pt}}\pgfpathlineto{\pgfqpoint{22.86pt}{41.24pt}}\pgfpathlineto{\pgfqpoint{24.82pt}{41.10pt}}\pgfpathlineto{\pgfqpoint{24.85pt}{41.55pt}}\pgfpathlineto{\pgfqpoint{23.42pt}{41.65pt}}\pgfpathlineto{\pgfqpoint{23.47pt}{42.33pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{26.11pt}{41.78pt}}\pgfpathlineto{\pgfqpoint{26.44pt}{41.99pt}}\pgfpathlineto{\pgfqpoint{27.02pt}{40.67pt}}\pgfpathlineto{\pgfqpoint{27.64pt}{40.53pt}}\pgfpathlineto{\pgfqpoint{26.85pt}{42.24pt}}\pgfpathlineto{\pgfqpoint{28.11pt}{43.10pt}}\pgfpathlineto{\pgfqpoint{27.49pt}{43.24pt}}\pgfpathlineto{\pgfqpoint{26.24pt}{42.35pt}}\pgfpathlineto{\pgfqpoint{26.50pt}{43.47pt}}\pgfpathlineto{\pgfqpoint{25.97pt}{43.59pt}}\pgfpathlineto{\pgfqpoint{25.39pt}{41.04pt}}\pgfpathlineto{\pgfqpoint{25.92pt}{40.92pt}}\pgfpathlineto{\pgfqpoint{26.11pt}{41.78pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{29.73pt}{39.62pt}}\pgfpathlineto{\pgfqpoint{30.24pt}{39.41pt}}\pgfpathlineto{\pgfqpoint{31.21pt}{41.86pt}}\pgfpathlineto{\pgfqpoint{30.70pt}{42.06pt}}\pgfpathlineto{\pgfqpoint{30.04pt}{40.40pt}}\pgfpathlineto{\pgfqpoint{29.73pt}{42.45pt}}\pgfpathlineto{\pgfqpoint{29.22pt}{42.65pt}}\pgfpathlineto{\pgfqpoint{28.25pt}{40.21pt}}\pgfpathlineto{\pgfqpoint{28.75pt}{40.01pt}}\pgfpathlineto{\pgfqpoint{29.42pt}{41.70pt}}\pgfpathlineto{\pgfqpoint{29.73pt}{39.62pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{32.73pt}{41.08pt}}\pgfpathlineto{\pgfqpoint{32.26pt}{41.35pt}}\pgfpathlineto{\pgfqpoint{30.94pt}{39.06pt}}\pgfpathlineto{\pgfqpoint{31.41pt}{38.79pt}}\pgfpathlineto{\pgfqpoint{32.73pt}{41.08pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{33.04pt}{38.93pt}}\pgfpathlineto{\pgfqpoint{33.42pt}{39.00pt}}\pgfpathlineto{\pgfqpoint{33.44pt}{37.55pt}}\pgfpathlineto{\pgfqpoint{33.96pt}{37.17pt}}\pgfpathlineto{\pgfqpoint{33.90pt}{39.07pt}}\pgfpathlineto{\pgfqpoint{35.42pt}{39.36pt}}\pgfpathlineto{\pgfqpoint{34.90pt}{39.74pt}}\pgfpathlineto{\pgfqpoint{33.39pt}{39.41pt}}\pgfpathlineto{\pgfqpoint{34.07pt}{40.34pt}}\pgfpathlineto{\pgfqpoint{33.63pt}{40.66pt}}\pgfpathlineto{\pgfqpoint{32.08pt}{38.54pt}}\pgfpathlineto{\pgfqpoint{32.52pt}{38.22pt}}\pgfpathlineto{\pgfqpoint{33.04pt}{38.93pt}}\pgfusepath{fill}
+\definecolor{ls}{rgb}{0.137,0.122,0.125}\pgfsetstrokecolor{ls}\pgfsetlinewidth{0.18pt}\pgfpathmoveto{\pgfqpoint{39.79pt}{34.10pt}}\pgfpathlineto{\pgfqpoint{38.79pt}{33.87pt}}\pgfpathlineto{\pgfqpoint{38.26pt}{34.76pt}}\pgfpathlineto{\pgfqpoint{38.15pt}{33.71pt}}\pgfpathlineto{\pgfqpoint{37.13pt}{33.47pt}}\pgfpathlineto{\pgfqpoint{38.09pt}{33.07pt}}\pgfpathlineto{\pgfqpoint{37.99pt}{32.04pt}}\pgfpathlineto{\pgfqpoint{38.68pt}{32.83pt}}\pgfpathlineto{\pgfqpoint{39.66pt}{32.44pt}}\pgfpathlineto{\pgfqpoint{39.12pt}{33.33pt}}\pgfpathlineto{\pgfqpoint{39.79pt}{34.10pt}}\pgfusepath{stroke}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{39.12pt}{33.33pt}}\pgfpathlineto{\pgfqpoint{39.66pt}{32.44pt}}\pgfpathlineto{\pgfqpoint{38.69pt}{32.83pt}}\pgfpathlineto{\pgfqpoint{38.00pt}{32.04pt}}\pgfpathlineto{\pgfqpoint{38.09pt}{33.07pt}}\pgfpathlineto{\pgfqpoint{37.13pt}{33.47pt}}\pgfpathlineto{\pgfqpoint{38.16pt}{33.71pt}}\pgfpathlineto{\pgfqpoint{38.26pt}{34.76pt}}\pgfpathlineto{\pgfqpoint{38.80pt}{33.87pt}}\pgfpathlineto{\pgfqpoint{39.80pt}{34.10pt}}\pgfpathlineto{\pgfqpoint{39.12pt}{33.33pt}}\pgfusepath{fill}
+\definecolor{lf}{rgb}{0.000,0.000,0.000}\pgfsetfillcolor{lf}\pgfpathmoveto{\pgfqpoint{22.87pt}{40.29pt}}\pgfpathcurveto{\pgfqpoint{13.71pt}{40.27pt}}{\pgfqpoint{6.32pt}{32.89pt}}{\pgfqpoint{6.36pt}{23.78pt}}\pgfpathcurveto{\pgfqpoint{6.32pt}{14.72pt}}{\pgfqpoint{13.71pt}{7.34pt}}{\pgfqpoint{22.87pt}{7.27pt}}\pgfpathcurveto{\pgfqpoint{31.88pt}{7.34pt}}{\pgfqpoint{39.26pt}{14.72pt}}{\pgfqpoint{39.22pt}{23.78pt}}\pgfpathcurveto{\pgfqpoint{39.26pt}{32.89pt}}{\pgfqpoint{31.88pt}{40.27pt}}{\pgfqpoint{22.87pt}{40.29pt}}\pgfpathmoveto{\pgfqpoint{18.38pt}{38.96pt}}\pgfpathlineto{\pgfqpoint{18.38pt}{34.64pt}}\pgfpathlineto{\pgfqpoint{15.66pt}{34.64pt}}\pgfpathlineto{\pgfqpoint{15.66pt}{32.07pt}}\pgfpathlineto{\pgfqpoint{18.38pt}{32.07pt}}\pgfpathlineto{\pgfqpoint{18.38pt}{28.55pt}}\pgfpathlineto{\pgfqpoint{7.84pt}{28.55pt}}\pgfpathcurveto{\pgfqpoint{8.01pt}{29.20pt}}{\pgfqpoint{8.54pt}{30.77pt}}{\pgfqpoint{9.21pt}{31.91pt}}\pgfpathlineto{\pgfqpoint{12.61pt}{31.91pt}}\pgfpathlineto{\pgfqpoint{12.61pt}{34.64pt}}\pgfpathlineto{\pgfqpoint{11.17pt}{34.64pt}}\pgfpathcurveto{\pgfqpoint{13.26pt}{36.81pt}}{\pgfqpoint{15.85pt}{38.30pt}}{\pgfqpoint{18.38pt}{38.96pt}}\pgfpathmoveto{\pgfqpoint{22.75pt}{36.76pt}}\pgfpathcurveto{\pgfqpoint{30.02pt}{36.68pt}}{\pgfqpoint{35.89pt}{30.80pt}}{\pgfqpoint{35.89pt}{23.62pt}}\pgfpathcurveto{\pgfqpoint{35.89pt}{16.36pt}}{\pgfqpoint{30.02pt}{10.49pt}}{\pgfqpoint{22.75pt}{10.47pt}}\pgfpathlineto{\pgfqpoint{22.75pt}{36.76pt}}\pgfpathmoveto{\pgfqpoint{7.76pt}{28.14pt}}\pgfpathlineto{\pgfqpoint{11.33pt}{28.14pt}}\pgfpathcurveto{\pgfqpoint{10.81pt}{27.19pt}}{\pgfqpoint{10.63pt}{25.99pt}}{\pgfqpoint{10.53pt}{25.26pt}}\pgfpathlineto{\pgfqpoint{18.74pt}{25.26pt}}\pgfpathlineto{\pgfqpoint{18.74pt}{22.05pt}}\pgfpathlineto{\pgfqpoint{10.53pt}{22.05pt}}\pgfpathcurveto{\pgfqpoint{10.61pt}{21.14pt}}{\pgfqpoint{10.89pt}{19.54pt}}{\pgfqpoint{11.33pt}{18.85pt}}\pgfpathlineto{\pgfqpoint{7.80pt}{18.85pt}}\pgfpathcurveto{\pgfqpoint{6.94pt}{21.78pt}}{\pgfqpoint{6.76pt}{25.28pt}}{\pgfqpoint{7.76pt}{28.14pt}}\pgfpathmoveto{\pgfqpoint{15.18pt}{21.49pt}}\pgfpathlineto{\pgfqpoint{18.74pt}{21.49pt}}\pgfpathlineto{\pgfqpoint{18.74pt}{12.52pt}}\pgfpathcurveto{\pgfqpoint{18.67pt}{11.32pt}}{\pgfqpoint{16.32pt}{9.22pt}}{\pgfqpoint{13.62pt}{11.08pt}}\pgfpathcurveto{\pgfqpoint{11.11pt}{12.61pt}}{\pgfqpoint{8.88pt}{15.90pt}}{\pgfqpoint{8.00pt}{18.29pt}}\pgfpathlineto{\pgfqpoint{11.65pt}{18.29pt}}\pgfpathcurveto{\pgfqpoint{13.30pt}{14.81pt}}{\pgfqpoint{15.13pt}{14.00pt}}{\pgfqpoint{15.18pt}{13.96pt}}\pgfpathlineto{\pgfqpoint{15.18pt}{21.49pt}}\pgfusepath{fill}
+\end{pgfpicture}}}
+
+% ===================== HÄR BÖRJAR TEXTEN =====================
+\begin{document}
+
+\vspace*{14pt}
+\noindent{\LARGE\bfseries \dokumenttitel\par}
+\vspace{4pt}
+\noindent Datateknologsektionen, Chalmers studentkår\\[2pt]
+{\itshape Antagen \dokumentdatum\ ·\ Ersätter policyn från 8 december 2022}
+\vspace{10pt}
+
+\section{Inledning}
+
+\subsection{Syfte}
+Denna policy beskriver hur sektionsstyrelsen på Datateknologsektionen (styret) bedriver incidenthantering, i vissa fall med beslut av sektionsmötet. Syftet är att säkerställa en saklig och förutsebar hantering där samtliga berörda parters rättigheter tillvaratas, oavsett sektionsstyrelsens sammansättning eller vilka som är inblandade i det enskilda ärendet.
+
+Policyn utgår från Chalmers Studentkårs riktlinjer för hantering av incidenter och kompletterar dessa.
+
+\subsection{Omfattning}
+Policyn gäller sektionsstyrelsen, sektionens kommittéer, utskott och projektgrupper samt samtliga medlemmar i Datateknologsektionen. Den omfattar incidenter som rör sektionens verksamhet, medlemmar eller lokaler.
+
+\subsection{Rättslig grund}
+Policyn ersätter inte lag, Chalmers regelverk, myndighetsprocesser eller polisens ansvar. Om ett ärende omfattas av lärosätets, myndighets eller rättsväsendets ansvar bör ärendet överlämnas eller samordnas med behörig funktion. Vid osäkerhet om ansvarsfördelningen bör kårens sociala enhet kontaktas innan ärendet hanteras vidare på egen hand.
+
+\subsection{Definitioner}
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{@{}>{\bfseries}p{3.2cm} p{10.8cm}@{}}
+\toprule
+\rowcolor{headshade}\textbf{Begrepp} & \textbf{Beskrivning} \\
+\midrule
+Incident & En oönskad händelse, uppgift eller omständighet som påverkar eller hotar sektionens verksamhet, någons trygghet, välbefinnande, säkerhet, förtroende, egendom eller efterlevnad av styrdokument. \\
+Rapportör & Den som rapporterat en incident. \\
+Rapporterad & Den eller de som blivit rapporterade för en incident. \\
+Berörd part & Den eller de individer som uppges ha påverkats av en incident. \\
+SO och vSO & Chalmers Studentkårs sociala enhets ordförande respektive vice ordförande. Ska inte förväxlas med sektionens ordförande och vice ordförande. \\
+Incident\-han\-ter\-ings\-grup\-pen & SAMS, sektionsordförande och vice sektionsordförande i Datateknologsektionen (sektionen använder ingen förkortning för dessa roller), som gemensamt ansvarar för hanteringen av incidenter enligt denna policy. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Tillämpningsprinciper}
+Följande principer ska tillämpas i samtliga ärenden.
+
+\subsection{Saklighet}
+Bedömningar och beslut ska grundas på dokumenterade uppgifter, relevanta omständigheter och gällande stadgar, reglemente, policyer och riktlinjer. Antaganden, rykten och personliga uppfattningar får inte ensamma ligga till grund för beslut.
+
+\subsection{Opartiskhet}
+Den som är jävig bör inte hantera eller besluta i ärendet ensam. Jäv föreligger när risk för partiskhet i en beslutssituation finns. Det kan vara en individs relation till någon inblandad, egenintresse, tidigare ställningstagande eller annan omständighet som påverkar förtroendet för hanteringen. Vid jäv i hanteringen bör åtgärden övervägas med ojävig part, såsom annan medlem i Incidenthanteringsgruppen, SO eller annan kårledningsperson, innan beslut fattas. Vid jäv i sektionsstyrelsen bör kårledningen eller sociala enheten tillfrågas.
+
+\subsection{Proportionalitet}
+Åtgärder bör stå i rimlig proportion till händelsens allvar, risk, påverkan, upprepning och tillgängligt underlag. Mer ingripande åtgärd ska inte användas om syftet kan uppnås med mindre ingripande åtgärd.
+
+\subsection{Diskretion}
+Information ska endast delas med individer som behöver den för att kunna hantera ärendet. Ärendet ska inte diskuteras i öppna forum, större gruppchattar eller med individer utan funktion i incidenten, utan godkännande av berörda parter.
+
+\subsection{Trygg hantering}
+Tillfälliga åtgärder bör vidtas under pågående utredning för att minska risken för fortsatt påverkan eller otrygghet innan ärendet är avgjort. Det kan till exempel innebära att tillfälligt separera inblandade parter i gemensamma sammanhang, begränsa tillgång till en lokal eller aktivitet under utredningstiden, eller erbjuda stöd till berörda parter. Åtgärden upphör eller ersätts av ett slutgiltigt beslut när utredningen är klar.
+
+\subsection{Dokumentation}
+Dokumentation ska föras i alla delar av incidenthanteringen. Detta kan innefatta mottagna uppgifter, bedömningar, möten, beslut och åtgärder. Dokumentationen bör tydliggöra vad som är bekräftade uppgifter och vad som är egna bedömningar.
+
+\section{Typer av incidenter}
+Det finns en rad olika typer av incidenter som kan inträffa. En incident kan innefatta flera olika typer samtidigt. Vid osäkerhet om vilken typ det rör sig om bör SO eller kårledningen kontaktas. En incident kan rapporteras både skriftligt och muntligt.
+
+\subsection{Övertramp av styrdokument}
+Övertramp av styrdokument avser när en medlem eller kommitté uppges ha agerat i strid med sektionens eller Chalmers Studentkårs stadgar, policyer, riktlinjer eller dispositionsavtal. Exempel på detta är ett arrangemang som inte festanmälts.
+
+\subsection{Trakasserier eller kränkande särbehandling}
+Trakasserier eller kränkande särbehandling avser verbala eller icke-verbala handlingar som kränker en individs värdighet, med eller utan koppling till någon av de sju diskrimineringsgrunderna. Det är den utsattes upplevelse som avgör om en handling anses utgöra trakasserier, inte styrelsens bedömning. Spannet är brett och kan innefatta allt från en olämplig kommentar till fysiskt våld.
+
+\subsection{Gruppdynamiska problem}
+Gruppdynamiska problem avser situationer där samarbetet i en kommitté, ett utskott eller en projektgrupp inte fungerar, på ett sätt som påverkar gruppens arbete eller enskilda medlemmars mående. Det kan bero på otydlig ansvarsfördelning, återkommande konflikter mellan medlemmar, eller att en individ utnyttjar sin position eller roll i gruppen på ett sätt som andra medlemmar upplever negativt.
+
+\subsection{Skada av material eller person}
+Skada av material eller person avser händelser där en individ, avsiktligt eller oavsiktligt, skadar, förstör eller hanterar sektionens eller kårens egendom utan tillåtelse, eller orsakar personskada. Inbrott, stölder, vattenläckor och olyckor omfattas av denna kategori. Allvarsgraden varierar kraftigt, från mindre skadegörelse till allvarlig personskada. Allvarligare fall kan även utgöra brott och hanteras då även enligt kapitel 4.1, i förekommande fall tillsammans med en polisanmälan.
+
+\subsection{Förekomst av narkotika}
+Förekomst av narkotika gäller vid såväl misstanke som bekräftade fall, exempelvis att en individ medfört narkotika till ett arrangemang, anlänt påverkad, eller utsatts för drogning. SO eller kårledningen ska alltid meddelas så snart kännedom om ett sådant ärende föreligger.
+
+\subsection{Dödsfall}
+Kan avse ett rykte om att en sektionsmedlem har avlidit, besked från högskolan om ett dödsfall, eller ett dödsfall som inträffar i anknytning till sektionens eller kårens verksamhet. Situationen ska alltid hanteras med respekt, oavsett hur säker informationen är. Se kapitel 4.3 för hur denna typ av incident hanteras i praktiken.
+
+\section{Att göra vid kännedom om en incident}
+
+\subsection{Pågående incident}
+Vid pågående fara för liv, hälsa eller säkerhet ska 112 kontaktas omedelbart. Detsamma gäller vid pågående brott. Sker händelsen i Chalmers lokaler eller i anslutning till sektionens verksamhet ska vSO alltid kontaktas utöver 112. Chalmersvakten (031-772 44 99) kan även kontaktas, men ersätter inte kontakt med 112 vid akut fara.
+
+I detta skede är syftet inte att utreda händelseförloppet, utan att avbryta pågående skada, säkerställa att samtliga är säkra samt, om det kan ske utan egen risk, avlägsna berörda individer från fara. Utredningen genomförs i ett senare skede.
+
+\subsection{Hanteringsprocessen}
+Nedan följer den gemensamma hanteringsprocessen, oavsett typ av incident. Ordningen är vägledande, och avsteg kan göras i enskilda fall när situationen kräver det. Avsteget ska då dokumenteras.
+\begin{itemize}
+\item Boka in ett möte eller samtal med den eller de berörda parterna. Detta sker i första hand för att klarlägga händelseförloppet: vad som inträffat, när, var samt vilka som varit inblandade.
+\item Låt berörd part vara delaktig i beslutet om mötet ska ske enskilt eller tillsammans med övriga inblandade, med hänsyn tagen till samtliga parters behov.
+\item Boka därefter möte med rapportören, om detta inte redan skett, samt därefter med den rapporterade. Anteckna noggrant varje parts version av händelseförloppet och avgör i samråd med berörd part om anteckningarna ska hållas anonyma gentemot övriga inblandade.
+\item Avgör i samråd med berörd part om en polisanmälan bör göras. SO kan kontaktas för stöd i bedömningen.
+\item Sammanställ underlaget och behandla ärendet i styrelsen. Vid osäkerhet bör SO, vSO eller programledningen kontaktas.
+\item Besluta om en åtgärd som står i proportion till det inträffade, se kapitel 5.
+\item Meddela rapportören och den rapporterade om det fattade beslutet samt redogör för hanteringsprocessen och den fortsatta hanteringen.
+\end{itemize}
+
+\subsubsection*{Övertramp av styrdokument}
+Ärendet ska diskuteras i sektionsstyrelsen. Vid behov av hjälp att tolka stadgarna kontaktas sektionens eller kårens inspektor. Råder osäkerhet om ett övertramp har skett ska frågan alltid diskuteras med kårledningen innan beslut fattas.
+
+\subsubsection*{Trakasserier eller kränkande särbehandling}
+Inget ska utlovas innan möte skett med samtliga inblandade och frågan diskuterats i styrelsen. Önskar den utsatte inte gå vidare med ärendet ska en bedömning göras av händelsens allvarlighetsgrad. Bedöms det kunna påverka andras säkerhet på sektionen kan styrelsen välja att agera oavsett den utsattes önskan. Väljer styrelsen att gå vidare ska den utsatte informeras, och ett gemensamt tillvägagångssätt eftersträvas, exempelvis genom att ärendet drivs vidare så länge den utsattes identitet förblir anonym.
+
+\subsubsection*{Gruppdynamiska problem}
+Möte ska hållas med samtliga som upplevt situationen problematisk. Frågor bör ställas om vad som anses ligga till grund för problematiken samt vad som bedöms kunna hjälpa. En handlingsplan ska fastställas vid behov, med hänsyn tagen till gruppmedlemmarnas synpunkter. Råder tvivel om lämplig åtgärd, eller föreligger delade åsikter inom Incidenthanteringsgruppen, bör sociala enhetens ordförande kontaktas för rådgivning.
+
+\subsubsection*{Skada av material eller person}
+Vid en pågående händelse, se 4.1. Har händelsen redan inträffat ska uppgift inhämtas om vilka som varit inblandade samt eventuella vittnen. Vid allvarlig material- eller personskada ska högskolans säkerhetssamordnare kontaktas och SO informeras, och en polisanmälan bör övervägas enligt den gemensamma hanteringsprocessen ovan.
+
+\subsubsection*{Förekomst av narkotika}
+SO eller kårledningen ska alltid meddelas. Situationen ska hanteras med samma försiktighet som vid skada av person, i synnerhet om en individ är påverkad eller kan ha utsatts för drogning mot sin vilja. En polisanmälan bör övervägas, särskilt vid misstanke om drogning.
+
+\subsection{Dödsfall}
+Vid ett bekräftat eller befarat dödsfall ska sociala enhetens ordförande kontaktas omgående. SO förmedlar informationen vidare till högskolan. Informationen får inte spridas, vare sig internt eller externt, innan högskolan har gett klartecken. Inträffar dödsfallet i anknytning till sektionens verksamhet ska ambulans tillkallas samt kårordförande och SO informeras direkt.
+
+Finns medlemmar i behov av stöd bör styrelsen bistå i den utsträckning som anses lämpligt, exempelvis genom att stanna hos en påverkad individ till dess vidare hjälp kan ges. SO, studentpräst eller kurator kan alltid kontaktas för att koordinera akut stöd. Styrelsen ska inte åta sig stödsamtal eller annan vård av chock.
+
+\subsection{Uppföljning}
+Uppföljning ska genomföras efter att en åtgärd har beslutats, i syfte att säkerställa att åtgärden haft avsedd effekt. Ansvaret för uppföljningen ligger hos den funktion som beslutade åtgärden.
+\begin{itemize}
+\item Kontroll av att åtgärden genomförts. Det bör exempelvis kontrolleras att en tilldelad städuppgift faktiskt har utförts, inte enbart att den har noterats som avslutad i ett protokoll.
+\item Bedömning av om åtgärden haft avsedd effekt, exempelvis om problematiken inom en grupp faktiskt har minskat efter en handlingsplan, eller endast avtagit tillfälligt.
+\item Bedömning av om kvarstående risk föreligger för att incidenten, eller en liknande situation, inträffar igen.
+\item Bedömning av om incidenten påvisar behov av ett förändrat arbetssätt inom sektionen, exempelvis en otydlig rutin eller ett ansvar som inte är tilldelat.
+\end{itemize}
+Har åtgärden inte haft avsedd effekt, eller kvarstår risken, bör ytterligare eller alternativa åtgärder övervägas. Se även åtgärdstrappan i kapitel 5.2.
+
+\section{Åtgärder}
+Med åtgärd avses den handling styrelsen beslutar om för att hantera en identifierad risk, återställa trygghet eller förebygga att en liknande situation uppstår igen. Åtgärden ska grundas på det underlag som framkommit under hanteringen och stå i proportion till incidentens karaktär, omfattning och risk för upprepning. Åtgärder kan kombineras och ska tidsbestämmas om inte annat anges.
+
+\subsection{Möjliga åtgärder}
+
+\atgard{Informationssamtal}{Ett samtal där sektionens regler eller förväntningar förtydligas. Lämpligt då en individ inte haft kännedom om gällande regler, exempelvis en förstaårsstudent som inte känt till att arrangemang ska festanmälas.}
+
+\atgard{Varning}{En tydlig markering om att ett beteende, agerande eller förhållningssätt inte är förenligt med sektionens eller kårens styrdokument. Varningen sparas internt med namn under verksamhetsåret, och anonymiseras därefter. Den används som underlag om personen blir inblandad i ytterligare incidenter under verksamhetsåret. Lämplig vid mildare incidenter och då personen inte tidigare varnats. Personen ska informeras om hur länge uppgiften sparas.}
+
+\atgard{Handlingsplan}{En dokumenterad plan med identifierade behov, planerade åtgärder, ansvarsfördelning, tidsram och former för uppföljning. Används ofta vid gruppdynamiska problem, kulturella problem eller traditioner, eller kring ett arrangemang.}
+
+\atgard{Stödinsats}{Stöd, vägledning eller anpassning till en individ, grupp eller verksamhet efter en incident, till exempel kuratorssamtal eller hänvisning till en vårdinstans. Lämplig vid incidenter som orsakat personligt lidande eller ett behov av professionellt stöd.}
+
+\atgard{Medling}{Ett strukturerat samtal mellan berörda parter med stöd av en neutral samtalsledare, för att skapa förutsättningar för förståelse och fortsatt samarbete. Lämplig vid konflikter mellan enskilda parter där samtliga inblandade är villiga att delta.}
+
+\atgard{Begränsning av uppdrag}{Personens möjlighet att utföra vissa uppgifter eller funktioner begränsas, till exempel att inte längre få arrangera på Gasquen eller hantera en kommittés inköp. Lämplig vid upprepade brister kopplade till en specifik uppgift eller funktion.}
+
+\atgard{Begränsning av representation}{Personen får inte längre representera sektionen i något sammanhang, bära kläder kopplade till sektionen eller synas som funktionär utåt. Att vara funktionär i bakgrunden, exempelvis genom matlagning vid ett arrangemang utan att synas utåt, är fortfarande tillåtet. Lämplig vid agerande som skadar sektionens anseende utåt.}
+
+\atgard{Begränsning av deltagande}{Personens möjlighet att delta i specifika aktiviteter eller arrangemang begränsas. Kan även innebära att personen får delta men inte konsumera alkohol. Lämplig när det är olämpligt att personen deltar i ett specifikt sammanhang, men inget bredare tillträde behöver begränsas.}
+
+\atgard{Begränsning av tillträde}{Personens tillgång till lokaler, förråd eller andra delar av verksamheten begränsas, till exempel sektionens förråd. Nyckel eller access kan dras in om styrelsen anser det lämpligt. Kåren kan även besluta om central avstängning från kårens lokaler. Lämplig vid missbruk av eller bristande aktsamhet kring tillgång till sektionens lokaler eller utrustning.
+
+En mildare variant är \textbf{Basen-ban}, som börjar gälla tre läsveckor efter styrelsens beslut och avslutas när personen utfört en städuppgift tilldelad av DRust. Basen-ban innebär att berörd person inte får boka Basen, hålla arrangemang i Basen eller gå på arrangemang som hålls i Basen. Bör användas vid missat Nollanstäd, om ingen giltig ursäkt lämnats, eller när sektionsmedlemmar inte städat tillräckligt efter ett arrangemang i sektionens lokaler.}
+
+\atgard{Avstängning}{En kombination av begränsad representation, deltagande och tillträde under en period. Kan gälla en enskild person eller en hel grupp. Lämplig vid allvarligare eller upprepade överträdelser där en enskild begränsning inte bedöms tillräcklig.}
+
+\atgard{Phadderbanning}{En avstängning från att delta som phadder. Används när en phadder inte följer sektionens och kårens policys eller styrdokument. Kan beslutas under pågående mottagning och gälla resten av mottagningen, eller beslutas under året och gälla en eller flera kommande mottagningar, beroende på allvarlighetsgrad.}
+
+\atgard{Entledigande}{Personen avslutar eller fråntas sitt uppdrag inom sektionen, motsvarande en avsättning enligt stadgarna (\S~[PARAGRAF]), och ska återlämna eventuella representationsplagg. Lämplig vid allvarliga överträdelser som gör att personen inte längre bedöms kunna inneha sitt uppdrag.}
+
+\atgard{Verksamhetsåtgärd}{En förändring av sektionens arbetssätt, rutiner, ansvarsfördelning eller styrdokument, i syfte att förbättra verksamhetens funktion eller minska identifierade risker. Lämplig när incidenten visar på ett strukturellt problem snarare än en enskild individs agerande.}
+
+\atgard{Anmälan till disciplinnämnden}{Görs till högskolan när incidenten skett inom högskolans verksamhet och strider mot Chalmers styrdokument. Fusk på tentor, diskriminering och skadegörelse i Chalmers lokaler hör hit. Varken sektionen eller kåren hanterar sådana ärenden själva.}
+
+\atgard{Polisanmälan}{Information om händelsen lämnas till polisen för bedömning och eventuell vidare handläggning. Görs i samråd med den utsatte där det är möjligt, och SO kan kontaktas för stöd. Lämplig vid misstänkt brott.}
+
+\atgard{Ingen ytterligare åtgärd}{Ärendet avslutas utan ytterligare åtgärd, efter att styrelsen gjort en genomförd bedömning av underlaget.}
+
+\subsection{Åtgärdstrappa}
+Åtgärdstrappan är en vägledande modell för hur eskalering bör ske om tidigare åtgärder inte gett avsedd effekt, om risken kvarstår, eller om ny information ändrar bedömningen av ärendet. Den beskriver inte en fast ordning som måste följas steg för steg, en mer ingripande åtgärd kan användas direkt om incidentens karaktär kräver det.
+
+\begin{itemize}
+\item \textbf{Klargörande åtgärder.} Skapar förståelse för situationen och tydliggör förväntningar, regler eller bedömningar. Målet är att hantera situationen genom dialog, information eller stöd, utan att begränsa något. Exempel: Informationssamtal, Stödinsats, Medling.
+\item \textbf{Korrigerande åtgärder.} Används om identifierade problem kvarstår eller om klargörande åtgärder inte räckt. Målet är att åtgärda bristerna och skapa tydliga förutsättningar för förändring. Exempel: Varning, Handlingsplan, Verksamhetsåtgärd.
+\item \textbf{Begränsande åtgärder.} Används om riskerna bedöms betydande eller om tidigare åtgärder inte varit tillräckliga. Målet är att minska risken för fortsatt påverkan på individ, verksamhet eller sektion. Exempel: Begränsning av uppdrag, representation, deltagande eller tillträde, Avstängning, Phadderbanning.
+\item \textbf{Eskalering eller överlämning.} Används när ärendet kräver ytterligare åtgärder som ligger utanför styrelsens mandat, eller inte längre kan hanteras inom sektionen. Ärendet lämnas då över till kårledningen, högskolan eller polisen, beroende på vad som är rätt instans. Exempel: Entledigande, Anmälan till disciplinnämnden, Polisanmälan.
+\end{itemize}
+
+\section{Rättigheter och skyldigheter}
+Berörda parters rättigheter och skyldigheter är lika. Utöver principerna i kapitel 2 har berörd part rätt att:
+\begin{itemize}
+\item få relevant information om hur ärendet handläggs,
+\item ta med en stödperson till möten,
+\item få återkoppling när beslut har fattats.
+\end{itemize}
+Berörd part förväntas i sin tur att:
+\begin{itemize}
+\item lämna relevanta uppgifter för att ärendet ska kunna hanteras,
+\item följa de åtgärder som beslutats,
+\item rapportera omständigheter som innebär fortsatt eller ökad risk.
+\end{itemize}
+
+\subsection{Omprövning och överklagan}
+Beslut som får konsekvenser för en part ska kunna omprövas eller överklagas. Det gäller under hela den tid en åtgärd pågår, till exempel hela avstängningstiden.
+
+\subsubsection*{Omprövning}
+En part som berörs av ett beslut kan i första hand begära omprövning. Begäran ska vara skriftlig, skickas till styret och innehålla vilket beslut som avses, skälen för omprövning, eventuella kompletterande uppgifter och önskad ändring. Begäran kan också göras anonymt till en enskild styrelsemedlem, som då är skyldig att föra ärendet vidare till styret utan att avslöja vem som begärt omprövningen.
+
+\subsubsection*{Överklagan}
+En omprövning enligt ovan måste ha begärts och avgjorts innan beslutet kan överklagas vidare. Är parten fortfarande inte nöjd efter omprövningen, kan beslutet överklagas till nästa instans i överklagningsordningen nedan. Begäran ska vara skriftlig och innehålla samma uppgifter som vid en omprövning. Den funktion som prövat ärendet tidigare bör inte pröva överklagan. Parten väljer själv vilken instans i ordningen ärendet ska överklagas till och behöver inte gå via de mellanliggande instanserna.
+
+Sektionsmötet är ett valfritt steg. I känsliga fall, exempelvis när den utsatte inte vill att ärendet berättas för hela sektionen, kan parten gå direkt till kårstyrelsen.
+
+Överklagningsordningen är:
+\begin{enumerate}
+\item Sektionsstyrelsen (styret)
+\item Sektionsmötet (valfritt, kan hoppas över)
+\item Kårstyrelsen -- \href{mailto:karstyrelsen@chs.se}{karstyrelsen@chs.se}
+\item FuM -- \href{mailto:talman@chs.se}{talman@chs.se}
+\end{enumerate}
+
+\section{Dokumentation och arkivering}
+Dokumentation ska föras genom hela hanteringen: mottagna uppgifter, bedömningar, möten, beslut och åtgärder. Diskussionsprotokoll och fullständiga protokoll sparas för att framtida incidenter ska kunna bedömas rättvist och i linje med tidigare åtgärder.
+
+Styret har rätt att vägra offentliggöra fullständiga protokoll om inte särskilda skäl finns, men beslutsprotokoll anslås alltid i anonymiserad form. Personuppgifter eller kännetecknande detaljer bör inte anges i mail eller på andra platser som utomstående lätt kan komma över av misstag.
+
+Styret bör föra en intern lista över personer som berörs av åtgärder som inte lagts till de allmänna handlingarna. Informationen från den listan delas bara med de som behöver den för att åtgärden ska kunna verkställas.
+
+Arkivering sker när ärendet är formellt avslutat, det vill säga efter att uppföljningen enligt kapitel 4.4 är klar. Dokumentationen ska innehålla typ av incident, ett anonymiserat händelseförlopp och den åtgärd som utförts, och hanteras enligt sektionens dokumenthanteringsrutiner och gällande dataskyddsregler. Varningar sparas med namn under verksamhetsåret och anonymiseras därefter. Styret får makulera personuppgifter och kännetecknande detaljer i protokollen efter att åtgärdens giltighetstid löpt ut, dock tidigast när ärendet inte längre kan överklagas.
+
+\section{Kontaktuppgifter}
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\small
+\begin{tabular}{@{}p{6.1cm} p{5.9cm} p{2.6cm}@{}}
+\toprule
+\rowcolor{headshade}\textbf{Funktion} & \textbf{E-post} & \textbf{Telefon} \\
+\midrule
+Sociala enhetens ordförande (SO) & so@chalmersstudentkar.se & 070-772 39 18 \\
+Sociala enhetens vice ordförande (vSO) & vso@chalmersstudentkar.se & 070-772 39 68 \\
+Kårordförande (KO) & ko@chalmersstudentkar.se & 070-772 39 02 \\
+Vice kårordförande (VO) & vo@chalmersstudentkar.se & 070-772 39 01 \\
+Säkerhetssamordnare, Chalmers & erik.eliasson@chalmers.se & 031-772 66 01 \\
+Jämlikhetssamordnare, Chalmers & sara.thornadtsson.chavarria@chalmers.se & 031-772 65 40 \\
+Chalmersvakten & chalmersvakten.aos@chalmers.se & 031-772 44 99 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+\noindent\textit{Detta dokument ersätter Datateknologsektionens tidigare policy för incidenthantering från 8 december 2022 och är uppdaterat för att följa Chalmers Studentkårs riktlinjer för hantering av incidenter, daterade 2026-08-12.}
+
+\end{document}
